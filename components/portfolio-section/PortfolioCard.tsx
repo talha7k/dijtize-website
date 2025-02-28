@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState, useContext } from "react";
 import { IconX } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
-import { CarouselContext } from "./Carousel";
+import { CarouselContext } from "./PortfolioCarousel";
 import { BlurImage } from "./BlurImage";
 
 interface CardProps {

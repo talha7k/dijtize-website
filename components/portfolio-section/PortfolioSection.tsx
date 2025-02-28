@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import { Carousel } from "./Carousel";
-import { Card } from "./Card";
+import { Carousel } from "./PortfolioCarousel";
+import { Card } from "./PortfolioCard";
 import { DummyContent } from "./DummyContent";
 
 export function PortfolioSection() {
