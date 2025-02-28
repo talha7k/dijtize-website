@@ -4,7 +4,7 @@ import { ServicesSection } from "@/components/services-section"
 import { ProcessSection } from "@/components/process-section"
 import { PortfolioSection } from "@/components/portfolio-section/PortfolioSection"
 import { TestimonialsSection } from "@/components/testimonial-section/testimonials-section"
-import { CTASection } from "@/components/cta-section"
+import { CTASection } from "@/components/cta-section/cta-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
