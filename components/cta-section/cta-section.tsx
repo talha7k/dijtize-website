@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Spotlight } from "@/components/ui/spotlight";
 import { ContactForm } from "./contact-form";
 import { motion, AnimatePresence } from "framer-motion";
-import { IconX } from "@tabler/icons-react"; // Import the close icon
 
 export function CTASection() {
   const [showForm, setShowForm] = useState(false);
@@ -16,9 +15,9 @@ export function CTASection() {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-[50vh] flex items-center justify-center overflow-hidden bg-neutral-900"
+      className="relative w-full min-h-[50vh] flex items-center justify-center overflow-hidden bg-background/90"
     >
-      <Spotlight className="hidden sm:block" fill="cyan" />
+      <Spotlight className="hidden sm:block" fill="primary" />
 
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-4xl mx-auto w-full">
@@ -33,12 +32,12 @@ export function CTASection() {
                   transition={{ duration: 0.3 }}
                 >
                   <>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 gray-100 leading-tight">
                       Ready to transform your{" "}
-                      <span className="text-cyan-400">idea</span> into{" "}
-                      <span className="text-cyan-400">digital reality</span>?
+                      <span className="text-primary">idea</span> into{" "}
+                      <span className="text-primary">digital reality</span>?
                     </h2>
-                    <p className="text-base md:text-lg text-neutral-200 mb-8 max-w-3xl leading-relaxed">
+                    <p className="text-base md:text-lg text-gray-400 mb-8 max-w-3xl leading-relaxed">
                       Join the innovative companies that trust Dijitize to deliver cutting-edge digital solutions.
                     </p>
                     <button
@@ -46,7 +45,7 @@ export function CTASection() {
                         console.log("Button clicked, setting showForm to true");
                         setShowForm(true);
                       }}
-                      className="px-8 py-3 rounded-full bg-cyan-500 hover:bg-cyan-600 text-black font-medium text-lg transition-all shadow-lg hover:shadow-cyan-500/50"
+                      className="px-8 py-3 rounded-xl bg-primary hover:bg-primary/90 text-black font-medium text-lg transition-all shadow-lg"
                     >
                       Schedule Consultation
                     </button>

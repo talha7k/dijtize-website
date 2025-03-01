@@ -1,4 +1,4 @@
-import { Timeline } from "@/components/ui/timeline"
+import { Timeline } from "@/components/process-section/timeline"
 import Image from "next/image";
 import React from "react";
 
@@ -148,7 +148,7 @@ const processData = [    {
 
 export function ProcessSection() {
   return (  
-    <section id="process" className="w-full py-20">
+    <section id="process" className="w-full py-20 bg-background/60">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Our Process</h2>

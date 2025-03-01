@@ -40,7 +40,7 @@ export function Navbar() {
           <span className="font-bold text-xl">DIJITIZE</span>
         </div>
       }
-      footer={<ThemeToggle />}
+      // footer={<ThemeToggle />}
       className="bg-neutral-100/80 dark:bg-neutral-900/80 backdrop-blur-md"
     />
   )

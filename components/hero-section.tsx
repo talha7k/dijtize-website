@@ -9,7 +9,7 @@ export function HeroSection() {
   return (
     <Sparkles className="h-screen flex flex-col items-center justify-center overflow-hidden bg-black">
       <div className="relative z-20 text-center px-6 md:px-10">
-        <h1 className="font-bold text-7xl md:text-9xl tracking-tight mb-4 text-white">DIJITIZE</h1>
+        <h1 className="font-bold text-7xl md:text-9xl tracking-tight mb-4">DIJITIZE</h1>
         <div className="mx-auto max-w-2xl">
           <TextGenerateEffect words={words} className="text-xl md:text-2xl text-neutral-200" />
         </div>

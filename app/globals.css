@@ -4,18 +4,18 @@
 
 :root {
   --foreground-rgb: 31, 41, 55;
-  --background-rgb: 249, 250, 251;
+  --background-rgb: 17, 24, 39;
 
   /* shadcn/ui variables */
-  --background: 0 0% 100%;
+  --background: 17, 24, 39;
   --foreground: 222.2 84% 4.9%;
-  --card: 0 0% 100%;
+  --card: 17, 24, 39;
   --card-foreground: 222.2 84% 4.9%;
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 84% 4.9%;
-  --primary: 180 100% 50%;
+  --primary: 180 90% 80%;
   --primary-foreground: 210 40% 98%;
-  --secondary: 300 100% 25%;
+  --secondary: 180 90% 60%;
   --secondary-foreground: 210 40% 98%;
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
@@ -67,6 +67,7 @@ body {
 .modal::-webkit-scrollbar {
   display: none;
 }
+ 
 
 @layer base {
   html {
@@ -120,5 +121,16 @@ body {
 
 .animate-scroll {
   animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 

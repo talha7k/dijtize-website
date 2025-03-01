@@ -51,9 +51,11 @@ export function PortfolioSection() {
   ));
 
   return (
+    <section       id="portfolio"
+    className="py-16 bg-background/30">
     <div className="w-full h-full py-20">
-      <h2 className="text-3xl md:text-5xl font-bold mb-4">Our Portfolio</h2>
+      <h2 className="text-3xl md:text-5xl justify-self-center font-bold mb-4">Our Portfolio</h2>
       <Carousel items={cards} />
-    </div>
+    </div></section>
   );
 }

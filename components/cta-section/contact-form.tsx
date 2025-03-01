@@ -6,7 +6,7 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
-import { IconX } from "@tabler/icons-react"; // Import the close icon
+import { XIcon}from "lucide-react";
 
 export function ContactForm({ onClose }: { onClose?: () => void }) {
   const [formData, setFormData] = useState({
@@ -42,28 +42,29 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
 
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-neutral-900 dark:bg-neutral-900">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="font-bold text-xl text-white">
+      <div className="flex justify-between mb-4">
+        <h2 className="font-bold text-xl gray-100">
           Schedule a Consultation
         </h2>
         {onClose && (
           <button
             onClick={onClose}
-            className="h-8 w-8 rounded-full  h-6 w-6 text-neutral-100 dark:text-neutral-900 bg-white hover:bg-neutral-400 flex items-center justify-center text-white transition-colors"
+            className="h-8 w-8 rounded-full  h-6 w-6 text-neutral-100 dark:text-neutral-900 bg-white hover:bg-neutral-400 flex items-center justify-center gray-100 transition-colors"
             aria-label="Close form"
           >
-
-            <IconX />
+<XIcon  />
+            
           </button>
         )}
       </div>
-      <p className="text-neutral-400 text-sm max-w-sm mt-2 mb-6">
-        Fill out the form below to connect with Dijitize and discuss your digital transformation needs.
+      <p className="text-primary  text-sm max-w-sm mt-2 mb-2">
+      Free consultation | Schedule a zoom meeting. </p>      <p className="text-gray-400 text-sm max-w-sm mt-2 mb-6">
+      Fill out the form below to connect with Dijitize and discuss your digital transformation needs.
       </p>
 
       <form className="my-4" onSubmit={handleSubmit}>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="name">Full Name</Label>
+          <Label htmlFor="name" className="self-start">Full Name</Label>
           <Input
             id="name"
             name="name"
@@ -75,7 +76,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
+          <Label htmlFor="email" className="self-start">Email Address</Label>
           <Input
             id="email"
             name="email"
@@ -87,7 +88,8 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="message">Message</Label>
+          <Label htmlFor="message" className="self-start"
+          >Message</Label>
           <Textarea
             id="message"
             name="message"
@@ -104,7 +106,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-cyan-500 hover:bg-cyan-600 text-black font-medium text-lg rounded-md h-10 transition-all shadow-lg hover:shadow-cyan-500/50"
+          className="w-full bg-primary hover:bg-primary/90 text-black font-medium text-lg rounded-xl h-10 transition-all shadow-lg"
         >
           {isSubmitting ? "Submitting..." : "Submit"}
         </Button>
