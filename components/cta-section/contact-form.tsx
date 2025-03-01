@@ -49,7 +49,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
         {onClose && (
           <button
             onClick={onClose}
-            className="h-8 w-8 rounded-full  h-6 w-6 text-neutral-100 dark:text-neutral-900 bg-white hover:bg-neutral-400 flex items-center justify-center gray-100 transition-colors"
+            className=" rounded-full opacity-80 transition-opacity hover:opacity-100 ring-2  relative z-40 h-10 w-10   flex items-center justify-center disabled:opacity-20"
             aria-label="Close form"
           >
 <XIcon  />

@@ -140,18 +140,18 @@ export const Carousel = ({
         </div>
         <div className="flex justify-end gap-2 mr-10">
           <button
-            className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+            className=" rounded-full opacity-80 transition-opacity hover:opacity-100 ring-2  relative z-40 h-10 w-10   flex items-center justify-center disabled:opacity-20"
             onClick={scrollLeft}
             disabled={!canScrollLeft}
           >
-            <ArrowLeft className="h-6 w-6 text-gray-500" />
+            <ArrowLeft />
           </button>
           <button
-            className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+            className=" rounded-full opacity-80 transition-opacity hover:opacity-100   ring-2  relative z-40 h-10 w-10   flex items-center justify-center disabled:opacity-20 "
             onClick={scrollRight}
             disabled={!canScrollRight}
           >
-            <ArrowRight className="h-6 w-6 text-gray-500" />
+            <ArrowRight />
           </button>
         </div>
       </div>

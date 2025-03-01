@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, ArrowRight } from "lucide-react"
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -114,10 +114,7 @@ export const AnimatedTestimonials = ({
               ease: "easeInOut",
             }}
           >
-
-            <h3 className="text-2xl font-bold">
-              {testimonials[active].name}
-            </h3>
+            <h3 className="text-2xl font-bold">{testimonials[active].name}</h3>
             <p className="text-sm text-gray-600 dark:text-neutral-400">
               {testimonials[active].designation}
             </p>
@@ -147,18 +144,18 @@ export const AnimatedTestimonials = ({
               ))}
             </motion.p>
           </motion.div>
-          <div className="flex gap-4 pt-12 md:pt-0">
+          <div className="flex gap-4 pt-12 md:pt-0 justify-end">
             <button
               onClick={handlePrev}
-              className="h-7 w-7 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center group/button"
+              className=" rounded-full opacity-80 transition-opacity hover:opacity-100 ring-2  relative z-40 h-10 w-10   flex items-center justify-center disabled:opacity-20"
             >
-              <ArrowLeft className="h-5 w-5 text-black dark:text-neutral-400 group-hover/button:rotate-12 transition-transform duration-300" />
-            </button>
+              <ArrowLeft />{" "}
+              </button>
             <button
               onClick={handleNext}
-              className="h-7 w-7 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center group/button"
+              className=" rounded-full opacity-80 transition-opacity hover:opacity-100 ring-2  relative z-40 h-10 w-10   flex items-center justify-center disabled:opacity-20"
             >
-              <ArrowRight className="h-5 w-5 text-black dark:text-neutral-400 group-hover/button:-rotate-12 transition-transform duration-300" />
+              <ArrowRight />{" "}
             </button>
           </div>
         </div>

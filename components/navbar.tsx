@@ -2,6 +2,7 @@
 import { ThemeToggle } from "./ui/theme-toggle"
 import { CuboidIcon as Cube } from "lucide-react"
 import { FloatingNav } from "@/components/ui/floating-navbar"
+import Image from "next/image";
 
 export function Navbar() {
   const navItems = [
@@ -36,8 +37,7 @@ export function Navbar() {
       navItems={navItems}
       logo={
         <div className="flex items-center gap-2">
-          <Cube className="h-6 w-6 text-primary-500" />
-          <span className="font-bold text-xl">DIJITIZE</span>
+            <Image src="/logo.png" alt="Company Logo" width={150} height={50} />
         </div>
       }
       // footer={<ThemeToggle />}
