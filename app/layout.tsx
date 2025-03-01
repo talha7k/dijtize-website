@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Dijitize | Your Idea → Digital Reality",
+   icons: {
+    icon: "/favicon.png",
+  },
   description:
     "Transform your ideas into digital reality with Dijitize's innovative solutions and cutting-edge technology.",
     generator: 'v0.dev'

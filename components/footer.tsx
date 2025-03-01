@@ -2,6 +2,7 @@
 
 import { ThemeToggle } from "./ui/theme-toggle"
 import { CuboidIcon as Cube, Github, Twitter, Linkedin, Instagram, Mail, MapPin, Phone } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -10,8 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Cube className="h-6 w-6 text-primary-500" />
-              <span className="font-bold text-xl">DIJITIZE</span>
+            <Image src="/logo.png" alt="DIJITIZE" width={185} height={40} />
             </div>
             <p className="text-neutral-400 mb-6">
               Transforming ideas into digital reality through innovative solutions and cutting-edge technology.

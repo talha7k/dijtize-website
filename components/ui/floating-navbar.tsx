@@ -55,7 +55,7 @@ export const FloatingNav = ({
           className,
         )}
       >
-        {logo && <div className="flex items-center">{logo}</div>}
+        {logo && <div className="flex items-center sm:flex hidden">{logo}</div>}
         <nav className="flex items-center gap-2">
           {navItems.map((item, index) => (
             <a

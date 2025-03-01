@@ -36,8 +36,8 @@ export function Navbar() {
     <FloatingNav
       navItems={navItems}
       logo={
-        <div className="flex items-center gap-2">
-            <Image src="/logo.png" alt="Company Logo" width={150} height={50} />
+        <div className="flex items-center gap-2 mr-3">
+            <Image src="/logo.png" alt="Company Logo" width={185} height={40} />
         </div>
       }
       // footer={<ThemeToggle />}
