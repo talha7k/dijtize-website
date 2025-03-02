@@ -106,7 +106,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-primary hover:bg-primary/90 text-black font-medium text-lg rounded-xl h-10 transition-all shadow-lg"
+          className="w-full bg-primary  hover:bg-blue-400 text-black font-medium text-lg rounded-xl h-10 transition-all shadow-lg"
         >
           {isSubmitting ? "Submitting..." : "Submit"}
         </Button>

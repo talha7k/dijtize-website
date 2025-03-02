@@ -1,6 +1,6 @@
 {
   "mobileApps": {
-    "icon": "/services/mobile/smartphone.png",
+    "icon": "/services/mobile.svg",
     "title": "Mobile App Development",
     "subservices": [
       {
@@ -51,7 +51,7 @@
     ]
   },
   "marketingVideo": {
-    "icon": "/services/video/video.png",
+    "icon": "/services/video.svg",
     "title": "Marketing Video Production",
     "subservices": [
       {
@@ -61,7 +61,6 @@
           "/services/techstack/after-effects.png",
           "/services/techstack/premiere.png",
           "/services/techstack/animate.png",
-          "/services/techstack/cinema-4d.png",
           "/services/techstack/blender.svg"
         ],
         "image": "/services/video/explainer.png"
@@ -72,9 +71,7 @@
         "techStack": [
           "/services/techstack/animate.png",
           "/services/techstack/after-effects.png",
-          "/services/techstack/premiere.png",
-          "/services/techstack/cinema-4d.png",
-          "/services/techstack/blender.svg"
+          "/services/techstack/premiere.png"
         ],
         "image": "/services/video/2d.png"
       },
@@ -84,9 +81,7 @@
         "techStack": [
           "/services/techstack/cinema-4d.png",
           "/services/techstack/blender.svg",
-          "/services/techstack/after-effects.png",
-          "/services/techstack/premiere.png",
-          "/services/techstack/animate.png"
+          "/services/techstack/after-effects.png"
         ],
         "image": "/services/video/3d-movie.png"
       },
@@ -106,15 +101,13 @@
         "techStack": [
           "/services/techstack/after-effects.png",
           "/services/techstack/cinema-4d.png",
-          "/services/techstack/blender.svg",          "/services/techstack/premiere.png",
-          "/services/techstack/animate.png"
-        ],
+          "/services/techstack/blender.svg"        ],
         "image": "/services/video/logo-animation.png"
       }
     ]
   },
   "brandingCreativeDesign": {
-    "icon": "/services/graphics/palette.png",
+    "icon": "/services/graphics.svg",
     "title": "Branding & Creative Design",
     "subservices": [
       {
@@ -168,7 +161,7 @@
     ]
   },
   "webDevelopment": {
-    "icon": "/services/web/globe.png",
+    "icon": "/services/web.svg",
     "title": "Web Development",
     "subservices": [
       {
@@ -176,12 +169,9 @@
         "description": "We build responsive websites that deliver a seamless experience across all devices. Our development process focuses on clean design, user-friendly interfaces, and fast loading times to ensure your online presence is both attractive and functional.",
         "techStack": [
           "/services/techstack/html-5.png",
-          "/services/techstack/css.png",
-          "/services/techstack/js.png",
           "/services/techstack/wordpress.png",
           "/services/techstack/php.png",
-          "/services/techstack/react.png",
-          "/services/techstack/next-js.svg"
+          "/services/techstack/react.png"
         ],
         "image": "/services/web/responsive-design.png"
       },
@@ -192,8 +182,8 @@
           "/services/techstack/shopify.png",
           "/services/techstack/woocommerce.png",
           "/services/techstack/magento.png",
-          "/services/techstack/html-5.png",
-          "/services/techstack/css.png"
+          "/services/techstack/nodejs.png",
+          "/services/techstack/react.png"
         ],
         "image": "/services/web/ecommerce.png"
       },
@@ -203,10 +193,8 @@
         "techStack": [
           "/services/techstack/nodejs.png",
           "/services/techstack/html-5.png",
-          "/services/techstack/css.png",
           "/services/techstack/js.png",
-          "/services/techstack/react.png",
-          "/services/techstack/next-js.svg"
+          "/services/techstack/react.png"
         ],
         "image": "/services/web/custom-web.png"
       },
@@ -217,7 +205,6 @@
           "/services/techstack/wordpress.png",
           "/services/techstack/git.png",
           "/services/techstack/google-analytics.png",
-          "/services/techstack/html-5.png",
           "/services/techstack/nodejs.png"
         ],
         "image": "/services/web/optimization.png"

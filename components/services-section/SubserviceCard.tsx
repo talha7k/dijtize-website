@@ -23,7 +23,7 @@ export function SubserviceCard({ subservice, onClick }: SubserviceCardProps) {
     >
       <div className="flex flex-row items-stretch  h-full">
         {/* Image Container */}
-        <div className="w-2/5 mt-20 relative mb-5 h-[125px] md:h-[150px] p-2 flex items-center justify-center">
+        <div className="w-2/5 mt-[10%] relative mb-5 h-[125px] md:h-[150px] p-2 flex items-center justify-center">
           <Image
             src={subservice.image || "/placeholder.svg"}
             alt={subservice.subservice}

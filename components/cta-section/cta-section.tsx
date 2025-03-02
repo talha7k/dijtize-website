@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Spotlight } from "@/components/ui/spotlight";
 import { ContactForm } from "./contact-form";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -17,7 +16,6 @@ export function CTASection() {
       id="contact"
       className="relative w-full min-h-[50vh] flex items-center justify-center overflow-hidden bg-background/90"
     >
-      <Spotlight className="hidden sm:block" fill="primary" />
 
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-4xl mx-auto w-full">
@@ -45,7 +43,7 @@ export function CTASection() {
                         console.log("Button clicked, setting showForm to true");
                         setShowForm(true);
                       }}
-                      className="px-8 py-3 rounded-xl bg-primary hover:bg-primary/90 text-black font-medium text-lg transition-all shadow-lg"
+                      className="px-8 py-3 rounded-xl bg-primary hover:bg-blue-400 text-black font-medium text-lg transition-all shadow-lg"
                     >
                       Schedule Consultation
                     </button>
