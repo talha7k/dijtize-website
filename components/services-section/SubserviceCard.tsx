@@ -1,48 +1,69 @@
-import Image from "next/image"
-import type { Subservice } from "@/app/data/servicesData"
-import { getTechIcon } from "@/app/data/servicesData"
-import * as LucideIcons from "lucide-react"
+import Image from "next/image";
+import type { Subservice } from "@/app/data/types";
 
 interface SubserviceCardProps {
-  subservice: Subservice
-  onClick: () => void
+  subservice: Subservice;
+  onClick: () => void;
 }
 
 export function SubserviceCard({ subservice, onClick }: SubserviceCardProps) {
-  // Dynamically get icons based on tech stack
-  const renderTechIcon = (tech: string) => {
-    const iconName = getTechIcon(tech)
-    const Icon = (LucideIcons as any)[iconName]
-    return Icon ? <Icon className="size-3.5 mr-1" /> : null
-  }
-
+  const formatTechName = (url: string) => {
+    return url
+      .split("/")
+      .pop()
+      ?.replace(/\.(png|svg)/, "")
+      ?.replace(/-/g, " ")
+      ?.replace(/(^\w|\s\w)/g, (m) => m.toUpperCase()) || "Unknown";
+  };
+  
   return (
     <div
-      className="bg-primary/5 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 h-full flex flex-col cursor-pointer overflow-hidden"
+      className="bg-primary/5 rounded-xl flex flex-col cursor-pointer overflow-hidden"
       onClick={onClick}
     >
-      <div className="flex flex-col md:flex-row h-full">
-        <div className="w-full md:w-2/5 relative h-48 md:h-auto">
+      <div className="flex flex-row items-stretch  h-full">
+        {/* Image Container */}
+        <div className="w-2/5 mt-20 relative mb-5 h-[125px] md:h-[150px] p-2 flex items-center justify-center">
           <Image
             src={subservice.image || "/placeholder.svg"}
             alt={subservice.subservice}
             fill
-            className="object-cover"
+            className="object-contain object-center"
+            sizes="(max-width: 768px) 100vw, 40vw"
+            priority={false}
+            style={{
+              maxHeight: "150px",
+              maxWidth: "100%",
+            }}
           />
         </div>
-        <div className="w-full md:w-3/5 p-8">
-          <h3 className="text-lg font-semibold mb-3 gray-100">{subservice.subservice}</h3>
-          <p className="text-sm text-gray-400 line-clamp-3 mb-4 flex-grow">{subservice.description}</p>
+
+        {/* Text and Tech Stack Container */}
+        <div className="w-3/5 p-6 flex flex-col">
+          <h3 className="text-lg font-semibold mb-3 text-gray-100">
+            {subservice.subservice}
+          </h3>
+          <p className="text-sm text-gray-400 mb-4 flex-grow">
+            {subservice.description}
+          </p>
           <div className="mt-auto">
             <p className="text-xs font-medium text-gray-200 mb-2">Tech Stack:</p>
-            <div className="flex flex-wrap gap-1.5">
-              {subservice.techStack.map((tech, index) => (
+            <div className="flex flex-wrap gap-2">
+              {subservice.techStack.map((techUrl, index) => (
                 <span
                   key={index}
-                  className="inline-flex items-center bg-gray-900 text-primary text-xs px-2.5 py-1.5 rounded-full"
+                  className="inline-flex items-center bg-gray-900 text-primary text-xs px-3 py-1 rounded-full h-8 min-w-[100px] justify-center"
                 >
-                  {renderTechIcon(tech)}
-                  {tech}
+                  <Image
+                    src={techUrl}
+                    alt={`Tech stack logo ${index}`}
+                    width={16}
+                    height={16}
+                    className="mr-2 object-contain"
+                  />
+                  <span className="truncate">
+                    {formatTechName(techUrl)}
+                  </span>
                 </span>
               ))}
             </div>
@@ -50,6 +71,5 @@ export function SubserviceCard({ subservice, onClick }: SubserviceCardProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

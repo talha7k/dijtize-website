@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import type { Subservice } from "@/app/data/servicesData"
+import type { Subservice } from "@/app/data/types";
 import { SubserviceCard } from "./SubserviceCard"
 import { ServiceModal } from "./ServiceModal"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
@@ -34,7 +34,7 @@ export function ServiceCarousel({ subservices }: ServiceCarouselProps) {
         <CarouselContent className="-ml-4 md:-ml-6">
           {subservices.map((service, index) => (
             <CarouselItem key={index} className="pl-4 md:pl-6 basis-full md:basis-1/2">
-              <div className="h-full">
+              <div className="h-full ">
                 <SubserviceCard subservice={service} onClick={() => handleServiceClick(service)} />
               </div>
             </CarouselItem>
@@ -50,4 +50,3 @@ export function ServiceCarousel({ subservices }: ServiceCarouselProps) {
     </div>
   )
 }
-
