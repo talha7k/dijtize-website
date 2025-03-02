@@ -1,57 +1,81 @@
-"use client"
+'use client';
+import React, { useRef, useState, useCallback, useEffect } from 'react';
+import { motion, useSpring, useTransform, SpringOptions } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
-import type React from "react"
+type SpotlightProps = {
+  className?: string;
+  size?: number;
+  springOptions?: SpringOptions;
+};
 
-import { cn } from "@/lib/utils"
-import { useRef, useState } from "react"
-
-export const Spotlight = ({
+export function Spotlight({
   className,
-  fill = "white",
-}: {
-  className?: string
-  fill?: string
-}) => {
-  const divRef = useRef<HTMLDivElement>(null)
-  const [position, setPosition] = useState({ x: 0, y: 0 })
-  const [opacity, setOpacity] = useState(0)
+  size = 200,
+  springOptions = { bounce: 0 },
+}: SpotlightProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [parentElement, setParentElement] = useState<HTMLElement | null>(null);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!divRef.current) return
+  const mouseX = useSpring(0, springOptions);
+  const mouseY = useSpring(0, springOptions);
 
-    const div = divRef.current
-    const rect = div.getBoundingClientRect()
+  const spotlightLeft = useTransform(mouseX, (x) => `${x - size / 2}px`);
+  const spotlightTop = useTransform(mouseY, (y) => `${y - size / 2}px`);
 
-    setPosition({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    })
-  }
+  useEffect(() => {
+    if (containerRef.current) {
+      const parent = containerRef.current.parentElement;
+      if (parent) {
+        parent.style.position = 'relative';
+        parent.style.overflow = 'hidden';
+        setParentElement(parent);
+      }
+    }
+  }, []);
 
-  const handleMouseEnter = () => {
-    setOpacity(1)
-  }
+  const handleMouseMove = useCallback(
+    (event: MouseEvent) => {
+      if (!parentElement) return;
+      const { left, top } = parentElement.getBoundingClientRect();
+      mouseX.set(event.clientX - left);
+      mouseY.set(event.clientY - top);
+    },
+    [mouseX, mouseY, parentElement]
+  );
 
-  const handleMouseLeave = () => {
-    setOpacity(0)
-  }
+  useEffect(() => {
+    if (!parentElement) return;
+
+    parentElement.addEventListener('mousemove', handleMouseMove);
+    parentElement.addEventListener('mouseenter', () => setIsHovered(true));
+    parentElement.addEventListener('mouseleave', () => setIsHovered(false));
+
+    return () => {
+      parentElement.removeEventListener('mousemove', handleMouseMove);
+      parentElement.removeEventListener('mouseenter', () => setIsHovered(true));
+      parentElement.removeEventListener('mouseleave', () =>
+        setIsHovered(false)
+      );
+    };
+  }, [parentElement, handleMouseMove]);
 
   return (
-    <div
-      ref={divRef}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className={cn("relative overflow-hidden bg-neutral-950", className)}
-    >
-      <div
-        className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-500"
-        style={{
-          opacity,
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, ${fill}10, transparent 40%)`,
-        }}
-      />
-    </div>
-  )
+    <motion.div
+      ref={containerRef}
+      className={cn(
+        'pointer-events-none absolute rounded-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops),transparent_80%)] blur-xl transition-opacity duration-200',
+        'from-zinc-50 via-zinc-100 to-zinc-200',
+        isHovered ? 'opacity-100' : 'opacity-0',
+        className
+      )}
+      style={{
+        width: size,
+        height: size,
+        left: spotlightLeft,
+        top: spotlightTop,
+      }}
+    />
+  );
 }
-

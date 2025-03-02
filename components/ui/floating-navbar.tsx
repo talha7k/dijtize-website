@@ -51,12 +51,12 @@ export const FloatingNav = ({
         }}
         transition={{ duration: 0.2 }}
         className={cn(
-          "fixed top-4 inset-x-0 mx-auto max-w-2xl z-50 flex justify-between items-center px-4 py-2 rounded-full border border-neutral-200 dark:border-neutral-800 shadow-[0_2px_10px_rgba(0,0,0,0.1)]",
+          "fixed top-4 inset-x-0 mx-auto max-w-4xl z-50  modal overflow-x-auto flex justify-between items-center px-4 py-2 rounded-full border border-neutral-200 dark:border-neutral-800 shadow-[0_2px_10px_rgba(0,0,0,0.1)]",
           className,
         )}
       >
-        {logo && <div className="flex items-center sm:flex hidden">{logo}</div>}
-        <nav className="flex items-center gap-2">
+        {logo && <div className="items-center md:flex hidden align-middle">{logo}</div>}
+        <nav className="flex items-center gap-2 mx-auto">
           {navItems.map((item, index) => (
             <a
               key={item.name}

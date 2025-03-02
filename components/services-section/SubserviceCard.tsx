@@ -39,7 +39,7 @@ export function SubserviceCard({ subservice, onClick }: SubserviceCardProps) {
               {subservice.techStack.map((tech, index) => (
                 <span
                   key={index}
-                  className="inline-flex items-center bg-primary/10 text-primary text-xs px-2.5 py-1.5 rounded-full"
+                  className="inline-flex items-center bg-gray-900 text-primary text-xs px-2.5 py-1.5 rounded-full"
                 >
                   {renderTechIcon(tech)}
                   {tech}

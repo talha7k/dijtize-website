@@ -24,7 +24,7 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-4xl max-h-[90vh] modal overflow-y-auto rounded-xl p-0 bg-transparent/40 backdrop-blur-sm">
+      <DialogContent className="sm:max-w-4xl max-h-[90vh] modal overflow-y-auto rounded-xl p-0 bg-transparent/55 backdrop-blur-sm">
         <div className="p-6 md:p-8">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold gray-100">{service.subservice}</DialogTitle>
@@ -44,7 +44,7 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
                   {service.techStack.map((tech, index) => (
                     <span
                       key={index}
-                      className="inline-flex items-center bg-primary/10 text-primary text-sm px-3 py-1.5 rounded-full"
+                      className="inline-flex items-center  bg-gray-900  text-primary text-sm px-3 py-1.5 rounded-full"
                     >
                       {renderTechIcon(tech)}
                       {tech}
