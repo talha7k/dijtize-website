@@ -3,6 +3,7 @@
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { X } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 import { cn } from "@/lib/utils"
 
@@ -44,8 +45,15 @@ const DialogContent = React.forwardRef<
       {...props}
     >
       {children}
-      <DialogPrimitive.Close className="absolute p-1 right-4 top-4 rounded-full opacity-70  transition-opacity hover:opacity-100 ring-2  disabled:pointer-events-none data-[state=open]:bg-primary data-[state=open]:text-primary">
-        <X />
+      <DialogPrimitive.Close className=" disabled:pointer-events-none data-[state=open]:bg-primary data-[state=open]:text-primary">
+      <Button
+            variant="outline" // Subtle, non-intrusive close button
+            size="lg" // Small, circular button
+            className="absolute top-4 right-4 h-8 w-8 p-0"
+            aria-label="Close modal"
+          >
+            <X className="h-4 w-4" /> {/* Use an 'X' icon for a professional look */}
+          </Button>
         <span className="sr-only">Close</span>
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>

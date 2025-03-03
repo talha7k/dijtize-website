@@ -60,7 +60,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
             variant="outline" // Use outline for a subtle border effect, similar to your ring-2
             size="sm"
             onClick={onClose}
-            className="h-8 w-8 rounded-lg hover:bg-white hover:text-black"
+            className="h-8 w-8 rounded-lg"
             aria-label="Close form"
           >
 <XIcon  />
@@ -117,7 +117,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-primary  hover:bg-white text-black font-medium text-lg rounded-xl h-10 transition-all shadow-lg"
+          className="w-full hover:bg-primary  bg-white text-black font-medium text-lg rounded-xl h-10 transition-all shadow-lg"
         >
           {isSubmitting ? "Submitting..." : "Submit"}
         </Button>

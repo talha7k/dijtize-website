@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
 import type { Subservice } from "@/app/data/types";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogClose } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
 
 interface ServiceModalProps {
   isOpen: boolean;
@@ -27,6 +29,9 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="modal sm:max-w-4xl max-h-[90vh] overflow-y-auto rounded-xl p-0 bg-transparent/55 backdrop-blur-sm">
         <div className="p-6 md:p-8 relative">
+ 
+
+        
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-gray-100 text-center">
               {service.subservice}

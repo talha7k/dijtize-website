@@ -43,7 +43,7 @@ export function CTASection() {
                         console.log("Button clicked, setting showForm to true");
                         setShowForm(true);
                       }}
-                      className="px-8 py-3 rounded-xl bg-primary hover:bg-white text-black font-medium text-lg transition-all shadow-lg"
+                      className="px-8 py-3 rounded-xl hover:bg-primary bg-white text-black font-medium text-lg transition-all shadow-lg"
                     >
                       Schedule Consultation
                     </button>
