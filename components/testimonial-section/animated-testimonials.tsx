@@ -1,9 +1,9 @@
 "use client";
-
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button"; // Import the existing Button component
 
 type Testimonial = {
   quote: string;
@@ -11,6 +11,7 @@ type Testimonial = {
   designation: string;
   src: string;
 };
+
 export const AnimatedTestimonials = ({
   testimonials,
   autoplay = true,
@@ -44,9 +45,10 @@ export const AnimatedTestimonials = ({
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
   };
+
   return (
-    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
-      <div className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
+    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-10">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
         <div>
           <div className="relative h-80 w-full">
             <AnimatePresence>
@@ -139,24 +141,29 @@ export const AnimatedTestimonials = ({
                   }}
                   className="inline-block"
                 >
-                  {word}&nbsp;
+                  {word} 
                 </motion.span>
               ))}
             </motion.p>
           </motion.div>
           <div className="flex gap-4 pt-12 md:pt-0 justify-end">
-            <button
+            <Button
+              variant="outline" // Use outline for a subtle border, similar to your ring-2
+              size="lg" // Use lg for a larger, rounded rectangle shape (h-11 px-8)
               onClick={handlePrev}
-              className=" rounded-full opacity-80 transition-opacity hover:opacity-100 ring-2  relative z-40 h-10 w-10   flex items-center justify-center disabled:opacity-20"
+              className="h-8 w-8 rounded-lg"
+
             >
-              <ArrowLeft />{" "}
-              </button>
-            <button
+              <ArrowLeft />
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="h-8 w-8 rounded-lg"
               onClick={handleNext}
-              className=" rounded-full opacity-80 transition-opacity hover:opacity-100 ring-2  relative z-40 h-10 w-10   flex items-center justify-center disabled:opacity-20"
             >
-              <ArrowRight />{" "}
-            </button>
+              <ArrowRight />
+            </Button>
           </div>
         </div>
       </div>

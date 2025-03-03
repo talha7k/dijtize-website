@@ -9,7 +9,7 @@ interface ServiceModalProps {
   service: Subservice | null;
 }
 
-export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
+export function PortfolioModal({ isOpen, onClose, service }: ServiceModalProps) {
   const formatTechName = (url: string) => {
     return (
       url
@@ -20,13 +20,12 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
         ?.replace(/(^\w|\s\w)/g, (m) => m.toUpperCase()) || "Unknown"
     );
   };
-
   if (!service) return null;
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="modal sm:max-w-4xl max-h-[90vh] overflow-y-auto rounded-xl p-0 bg-transparent/55 backdrop-blur-sm">
-        <div className="p-6 md:p-8 relative">
+        <div className="p-6 md:p-8">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-gray-100 text-center">
               {service.subservice}
@@ -34,7 +33,6 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
           </DialogHeader>
 
           <div className="mt-6 flex flex-col sm:grid sm:grid-cols-[35%_65%] md:grid-cols-[35%_65%] gap-8">
-            {/* Image Container */}
             <div className="transition-transform duration-300 hover:scale-110 relative h-[150px] sm:h-auto min-h-[100px] max-h-[150px] rounded-lg overflow-hidden flex items-center justify-center w-full sm:w-auto">
               <Image
                 src={service.image || "/placeholder.svg"}
@@ -46,7 +44,6 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
               />
             </div>
 
-            {/* Content Section */}
             <div className="w-full sm:w-auto">
               <div className="text-base text-gray-300 mb-6">{service.description}</div>
 

@@ -17,7 +17,7 @@ export function HeroSection() {
               Dijitize.com
             </h1>
             <p className="mt-3 md:mt-5 text-neutral-400 text-xl md:text-2xl">
-              Bringing your vision to life with latest technology!
+              Your Idea → Digital Reality!
             </p>
           </div>
         </div>

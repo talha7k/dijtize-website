@@ -18,28 +18,27 @@ export function SubserviceCard({ subservice, onClick }: SubserviceCardProps) {
   
   return (
     <div
-      className="bg-primary/5 rounded-xl flex flex-col cursor-pointer overflow-hidden"
+      className="transition-transform p-5 duration-300 hover:scale-95 bg-primary/5 rounded-xl flex flex-col hover:bg-white/5 cursor-pointer overflow-hidden"
       onClick={onClick}
     >
-      <div className="flex flex-row items-stretch  h-full">
+      <div className="flex flex-col items-stretch  h-full">
         {/* Image Container */}
-        <div className="w-2/5 mt-[10%] relative mb-5 h-[125px] md:h-[150px] p-2 flex items-center justify-center">
+        <div className=" my-5 relative h-[100px] md:h-[100px] flex items-center justify-center">
           <Image
             src={subservice.image || "/placeholder.svg"}
             alt={subservice.subservice}
             fill
             className="object-contain object-center"
-            sizes="(max-width: 768px) 100vw, 40vw"
             priority={false}
             style={{
-              maxHeight: "150px",
+              maxHeight: "100px",
               maxWidth: "100%",
             }}
           />
         </div>
 
         {/* Text and Tech Stack Container */}
-        <div className="w-3/5 p-6 flex flex-col">
+        <div className="p-6 flex flex-col">
           <h3 className="text-lg font-semibold mb-3 text-gray-100">
             {subservice.subservice}
           </h3>

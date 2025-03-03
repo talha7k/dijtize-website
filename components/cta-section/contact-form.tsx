@@ -30,7 +30,16 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
     try {
       console.log("Form submitted:", formData);
       // Replace with your actual backend endpoint
-      // await fetch("/api/contact", { method: "POST", body: JSON.stringify(formData) });
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          to: "info@dijitize.com",
+        }),
+      });
 
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
@@ -47,14 +56,16 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
           Schedule a Consultation
         </h2>
         {onClose && (
-          <button
+          <Button
+            variant="outline" // Use outline for a subtle border effect, similar to your ring-2
+            size="sm"
             onClick={onClose}
-            className=" rounded-full opacity-80 transition-opacity hover:opacity-100 ring-2  relative z-40 h-10 w-10   flex items-center justify-center disabled:opacity-20"
+            className="h-8 w-8 rounded-lg hover:bg-white hover:text-black"
             aria-label="Close form"
           >
 <XIcon  />
             
-          </button>
+          </Button>
         )}
       </div>
       <p className="text-primary  text-sm max-w-sm mt-2 mb-2">
@@ -106,7 +117,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-primary  hover:bg-blue-400 text-black font-medium text-lg rounded-xl h-10 transition-all shadow-lg"
+          className="w-full bg-primary  hover:bg-white text-black font-medium text-lg rounded-xl h-10 transition-all shadow-lg"
         >
           {isSubmitting ? "Submitting..." : "Submit"}
         </Button>

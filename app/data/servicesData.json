@@ -1,7 +1,7 @@
 {
   "mobileApps": {
     "icon": "/services/mobile.svg",
-    "title": "Mobile App Development",
+    "title": "Mobile Apps",
     "subservices": [
       {
         "subservice": "Native App Development",
@@ -52,7 +52,7 @@
   },
   "marketingVideo": {
     "icon": "/services/video.svg",
-    "title": "Marketing Video Production",
+    "title": "Marketing Videos",
     "subservices": [
       {
         "subservice": "Explainer Video Animation",
@@ -108,7 +108,7 @@
   },
   "brandingCreativeDesign": {
     "icon": "/services/graphics.svg",
-    "title": "Branding & Creative Design",
+    "title": "Branding",
     "subservices": [
       {
         "subservice": "Logo & Identity Design",

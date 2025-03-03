@@ -14,7 +14,7 @@ export function CTASection() {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-[50vh] flex items-center justify-center overflow-hidden bg-background/90"
+      className="relative w-full min-h-[60vh] flex items-center justify-center overflow-hidden bg-white/10"
     >
 
       <div className="container mx-auto px-4 z-10 relative">
@@ -43,7 +43,7 @@ export function CTASection() {
                         console.log("Button clicked, setting showForm to true");
                         setShowForm(true);
                       }}
-                      className="px-8 py-3 rounded-xl bg-primary hover:bg-blue-400 text-black font-medium text-lg transition-all shadow-lg"
+                      className="px-8 py-3 rounded-xl bg-primary hover:bg-white text-black font-medium text-lg transition-all shadow-lg"
                     >
                       Schedule Consultation
                     </button>

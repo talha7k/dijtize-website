@@ -1,0 +1,96 @@
+{
+    "timeline": [
+      {
+        "title": "Concept & Planning",
+        "content": {
+          "text": [
+            "We begin by understanding your vision and defining project goals.",
+            "Detailed planning ensures a smooth development process."
+          ],
+          "images": [
+            {
+              "src": "https://picsum.photos/200/300?random=1",
+              "alt": "Concept brainstorming",
+              "width": 500,
+              "height": 500
+            },
+            {
+              "src": "https://picsum.photos/200/300?random=2",
+              "alt": "Planning wireframes",
+              "width": 500,
+              "height": 500
+            }
+          ]
+        }
+      },
+      {
+        "title": "Design & Prototyping",
+        "content": {
+          "text": [
+            "Our team crafts intuitive designs and interactive prototypes.",
+            "We iterate based on feedback to perfect the user experience."
+          ],
+          "images": [
+            {
+              "src": "https://picsum.photos/200/300?random=3",
+              "alt": "UI design mockup",
+              "width": 500,
+              "height": 500
+            },
+            {
+              "src": "https://picsum.photos/200/300?random=4",
+              "alt": "Prototype testing",
+              "width": 500,
+              "height": 500
+            }
+          ]
+        }
+      },
+      {
+        "title": "Development & Testing",
+        "content": {
+          "text": [
+            "We build robust, scalable solutions with cutting-edge tech.",
+            "Rigorous testing ensures quality and performance."
+          ],
+          "images": [
+            {
+              "src": "https://picsum.photos/200/300?random=5",
+              "alt": "Code development",
+              "width": 500,
+              "height": 500
+            },
+            {
+              "src": "https://picsum.photos/200/300?random=6",
+              "alt": "Testing phase",
+              "width": 500,
+              "height": 500
+            }
+          ]
+        }
+      },
+      {
+        "title": "Launch & Support",
+        "content": {
+          "text": [
+            "We deploy your project and provide ongoing support.",
+            "Continuous updates keep your solution ahead of the curve."
+          ],
+          "images": [
+            {
+              "src": "https://picsum.photos/200/300?random=7",
+              "alt": "Launch celebration",
+              "width": 500,
+              "height": 500
+            },
+            {
+              "src": "https://picsum.photos/200/300?random=8",
+              "alt": "Support team",
+              "width": 500,
+              "height": 500
+            }
+          ]
+        }
+      }
+    ]
+  }

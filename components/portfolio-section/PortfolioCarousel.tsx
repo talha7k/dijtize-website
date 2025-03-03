@@ -1,14 +1,15 @@
 "use client";
 import React, { useEffect, useRef, useState, createContext } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react"
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button"; // Import the existing Button component
 
 interface CarouselProps {
   items: JSX.Element[];
   initialScroll?: number;
-  autoScrollInterval?: number; // Time in milliseconds between scrolls
-  enableAutoScroll?: boolean; // Toggle auto-scroll on/off
+  autoScrollInterval?: number;
+  enableAutoScroll?: boolean;
 }
 
 export const CarouselContext = createContext<{
@@ -22,8 +23,8 @@ export const CarouselContext = createContext<{
 export const Carousel = ({
   items,
   initialScroll = 0,
-  autoScrollInterval = 3000, // Default: 3 seconds
-  enableAutoScroll = true, // Default: enabled
+  autoScrollInterval = 3000,
+  enableAutoScroll = true,
 }: CarouselProps) => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -31,7 +32,6 @@ export const Carousel = ({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoScrolling, setIsAutoScrolling] = useState(enableAutoScroll);
 
-  // Initialize scroll position and check scrollability
   useEffect(() => {
     if (carouselRef.current) {
       carouselRef.current.scrollLeft = initialScroll;
@@ -39,7 +39,6 @@ export const Carousel = ({
     }
   }, [initialScroll]);
 
-  // Check if scrolling is possible in either direction
   const checkScrollability = () => {
     if (carouselRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
@@ -48,40 +47,36 @@ export const Carousel = ({
     }
   };
 
-  // Scroll left manually
   const scrollLeft = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
-      setIsAutoScrolling(false); // Pause auto-scroll on manual interaction
+      setIsAutoScrolling(false);
     }
   };
 
-  // Scroll right manually
   const scrollRight = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
-      setIsAutoScrolling(false); // Pause auto-scroll on manual interaction
+      setIsAutoScrolling(false);
     }
   };
 
-  // Handle card close (scroll to specific item)
   const handleCardClose = (index: number) => {
     if (carouselRef.current) {
-      const cardWidth = isMobile() ? 230 : 384;
-      const gap = isMobile() ? 4 : 8;
-      const scrollPosition = (cardWidth + gap) * (index + 1);
+      const cardWidth = isMobile() ? 230 : 384; // Card width from PortfolioCard
+      const gap = isMobile() ? 4 : 8; // Gap from carousel styling
+      const scrollPosition = (cardWidth + gap) * index; // Fixed calculation
       carouselRef.current.scrollTo({
         left: scrollPosition,
         behavior: "smooth",
       });
       setCurrentIndex(index);
-      setIsAutoScrolling(false); // Pause auto-scroll on card close
+      setIsAutoScrolling(false);
     }
   };
 
   const isMobile = () => window.innerWidth < 768;
 
-  // Auto-scroll implementation
   useEffect(() => {
     let autoScrollTimer: NodeJS.Timeout;
 
@@ -90,17 +85,14 @@ export const Carousel = ({
         if (carouselRef.current) {
           const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
           if (scrollLeft + clientWidth >= scrollWidth) {
-            // Loop back to the start when reaching the end
             carouselRef.current.scrollTo({ left: 0, behavior: "smooth" });
           } else {
-            // Scroll right by 300px
             carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
           }
         }
       }, autoScrollInterval);
     }
 
-    // Cleanup interval on unmount or when dependencies change
     return () => clearInterval(autoScrollTimer);
   }, [isAutoScrolling, enableAutoScroll, autoScrollInterval]);
 
@@ -113,8 +105,8 @@ export const Carousel = ({
           className="flex w-full p-8 overflow-x-scroll overscroll-x-auto py-10 md:py-20 scroll-smooth [scrollbar-width:none]"
           ref={carouselRef}
           onScroll={checkScrollability}
-          onMouseEnter={() => setIsAutoScrolling(false)} // Pause on hover
-          onMouseLeave={() => setIsAutoScrolling(enableAutoScroll)} // Resume on mouse leave
+          onMouseEnter={() => setIsAutoScrolling(false)}
+          onMouseLeave={() => setIsAutoScrolling(enableAutoScroll)}
         >
           <div className="flex flex-row justify-start gap-4 pl-4 mx-auto">
             {items.map((item, index) => (
@@ -138,21 +130,25 @@ export const Carousel = ({
             ))}
           </div>
         </div>
-        <div className="flex justify-end gap-2 mr-10">
-          <button
-            className=" rounded-full opacity-80 transition-opacity hover:opacity-100 ring-2  relative z-40 h-10 w-10   flex items-center justify-center disabled:opacity-20"
+        <div className="flex justify-end gap-4 mr-10">
+          <Button
+            variant="outline" // Use outline for a subtle border effect, similar to your ring-2
+            size="lg" // Use lg for a larger size, approximating "xl" (h-11 px-8)
             onClick={scrollLeft}
+            className="h-8 w-8 rounded-lg"
             disabled={!canScrollLeft}
           >
             <ArrowLeft />
-          </button>
-          <button
-            className=" rounded-full opacity-80 transition-opacity hover:opacity-100   ring-2  relative z-40 h-10 w-10   flex items-center justify-center disabled:opacity-20 "
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
             onClick={scrollRight}
+            className="h-8 w-8 rounded-lg"
             disabled={!canScrollRight}
           >
             <ArrowRight />
-          </button>
+          </Button>
         </div>
       </div>
     </CarouselContext.Provider>
