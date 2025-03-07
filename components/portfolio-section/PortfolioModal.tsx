@@ -33,7 +33,7 @@ export function PortfolioModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="modal max-h-[90vh] max-w-[90%] overflow-y-auto rounded-xl bg-transparent/55 p-5 backdrop-blur-sm">
+      <DialogContent className="modal m-[10%] max-h-[80vh] max-w-[80vw] overflow-y-auto rounded-xl bg-transparent/55 p-5 backdrop-blur-sm">
         <div className="p-6 md:p-8">
           <DialogHeader>
             <DialogTitle className="text-center text-2xl font-bold text-gray-100">
