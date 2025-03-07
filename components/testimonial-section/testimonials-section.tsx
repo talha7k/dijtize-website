@@ -15,9 +15,9 @@ export function TestimonialsSection() {
   const testimonials: Testimonial[] = testimonialsData.testimonials;
 
   return (
-    <section id="testimonials" className="bg-background/10 py-20">
+    <section id="testimonials" className="bg-background/10 py-12">
       <div className="container mx-auto px-4">
-        <div className="mt-8 text-center">
+        <div className="my-10 text-center">
           <h2 className="gray-100 mb-4 text-3xl font-bold md:text-4xl">
             Our Feedbacks
           </h2>
@@ -26,7 +26,7 @@ export function TestimonialsSection() {
           </p>
         </div>
         {/* Div to control size of AnimatedTestimonials with overflow handling */}
-        <div className="relative mx-auto w-full max-w-4xl overflow-hidden">
+        <div className="relative mx-auto mt-12 w-full max-w-4xl overflow-hidden">
           {/* Optional: Add a border or background to visualize boundaries */}
           <AnimatedTestimonials
             testimonials={testimonials}
