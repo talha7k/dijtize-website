@@ -21,10 +21,10 @@ export function Navbar() {
         <div className="align-middle">
           <Image
             src="/logo.png"
-            alt="Company Logo"
+            alt="Dijitize"
             width={185}
             height={30}
-            className="h-[30px] w-auto object-contain"
+            className="object-contain"
           />
         </div>
       }
