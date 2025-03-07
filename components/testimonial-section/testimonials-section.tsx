@@ -15,23 +15,23 @@ export function TestimonialsSection() {
   const testimonials: Testimonial[] = testimonialsData.testimonials;
 
   return (
-    <section id="testimonials" className="py-20 bg-background/10">
+    <section id="testimonials" className="bg-background/10 py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mt-8">
-          <h2 className="text-3xl md:text-4xl font-bold gray-100 mb-4">
+        <div className="mt-8 text-center">
+          <h2 className="gray-100 mb-4 text-3xl font-bold md:text-4xl">
             Our Feedbacks
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-gray-400">
             What people say about us!
           </p>
         </div>
         {/* Div to control size of AnimatedTestimonials with overflow handling */}
-        <div className="w-full max-w-4xl mx-auto  overflow-hidden relative">
+        <div className="relative mx-auto w-full max-w-4xl overflow-hidden">
           {/* Optional: Add a border or background to visualize boundaries */}
           <AnimatedTestimonials
             testimonials={testimonials}
             autoplay={true}
-            delay={3000}
+            delay={4000}
           />
         </div>
       </div>

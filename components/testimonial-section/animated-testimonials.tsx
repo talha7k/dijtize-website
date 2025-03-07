@@ -2,7 +2,7 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button"; // Import the existing Button component
 
 type Testimonial = {
@@ -22,33 +22,45 @@ export const AnimatedTestimonials = ({
   delay?: number;
 }) => {
   const [active, setActive] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null); // Store the interval ID
+
+  // Function to start or restart the interval
+  const startInterval = () => {
+    if (autoplay) {
+      if (intervalRef.current) clearInterval(intervalRef.current); // Clear existing interval
+      intervalRef.current = setInterval(handleNext, delay); // Start new interval
+    }
+  };
 
   const handleNext = () => {
     setActive((prev) => (prev + 1) % testimonials.length);
+    startInterval(); // Reset interval on click
   };
 
   const handlePrev = () => {
     setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    startInterval(); // Reset interval on click
   };
 
   const isActive = (index: number) => {
     return index === active;
   };
 
+  // Set up initial interval and clean up on unmount
   useEffect(() => {
-    if (autoplay) {
-      const interval = setInterval(handleNext, delay);
-      return () => clearInterval(interval);
-    }
-  }, [autoplay]);
+    startInterval(); // Start interval on mount
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current); // Clean up on unmount
+    };
+  }, [autoplay, delay]); // Re-run if autoplay or delay changes
 
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
   };
 
   return (
-    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-10">
-      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
+    <div className="mx-auto max-w-sm px-4 py-10 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+      <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
         <div>
           <div className="relative h-80 w-full">
             <AnimatePresence>
@@ -96,7 +108,7 @@ export const AnimatedTestimonials = ({
             </AnimatePresence>
           </div>
         </div>
-        <div className="flex justify-between flex-col py-4">
+        <div className="flex flex-col justify-between py-4">
           <motion.div
             key={active}
             initial={{
@@ -120,7 +132,7 @@ export const AnimatedTestimonials = ({
             <p className="text-sm text-gray-600 dark:text-neutral-400">
               {testimonials[active].designation}
             </p>
-            <motion.p className="text-lg text-gray-500 mt-8 text-gray-600 dark:text-neutral-300">
+            <motion.p className="mt-8 text-lg text-gray-500 text-gray-600 dark:text-neutral-300">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -146,13 +158,12 @@ export const AnimatedTestimonials = ({
               ))}
             </motion.p>
           </motion.div>
-          <div className="flex gap-4 pt-12 md:pt-0 justify-end">
+          <div className="flex justify-end gap-4 pt-12 md:pt-0">
             <Button
-              variant="outline" // Use outline for a subtle border, similar to your ring-2
-              size="lg" // Use lg for a larger, rounded rectangle shape (h-11 px-8)
+              variant="outline"
+              size="lg"
               onClick={handlePrev}
               className="h-8 w-8 rounded-lg"
-
             >
               <ArrowLeft />
             </Button>

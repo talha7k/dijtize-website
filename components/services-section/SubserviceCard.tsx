@@ -20,7 +20,7 @@ export function SubserviceCard({ subservice, onClick }: SubserviceCardProps) {
 
   return (
     <div
-      className="flex cursor-pointer flex-col overflow-hidden rounded-xl bg-primary/5 p-5 transition-transform duration-300 hover:scale-95 hover:bg-white/5"
+      className="flex cursor-pointer flex-col overflow-hidden rounded-xl bg-primary/5 px-1 transition-transform duration-300 hover:scale-95 hover:bg-white/5 md:px-2"
       onClick={onClick}
     >
       <div className="flex h-full flex-col items-stretch">
