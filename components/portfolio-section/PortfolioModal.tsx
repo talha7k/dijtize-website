@@ -33,8 +33,8 @@ export function PortfolioModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="modal scrollbar-hidden flex max-h-[80vh] max-w-[80vw] items-center justify-center rounded-xl bg-transparent/55 p-5 backdrop-blur-sm">
-        <div className="relative max-h-[75vh] w-full overflow-y-auto p-6">
+      <DialogContent className="modal scrollbar-hidden flex max-h-[90vh] max-w-[90vw] items-center justify-center rounded-xl bg-transparent/55 p-5 backdrop-blur-sm">
+        <div className="relative mt-6 max-h-[75vh] w-full overflow-y-auto px-2 py-3 md:p-8">
           <DialogHeader>
             <DialogTitle className="text-center text-2xl font-bold text-gray-100">
               {service.subservice}

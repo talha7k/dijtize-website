@@ -75,7 +75,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
   };
 
   return (
-    <div className="mx-auto w-full max-w-md rounded-xl bg-neutral-900 p-6 shadow-input dark:bg-neutral-900 md:rounded-2xl md:p-8">
+    <div className="m-1 mx-auto w-full max-w-md rounded-xl bg-neutral-900 p-6 shadow-input dark:bg-neutral-900 md:m-3 md:rounded-2xl md:p-8">
       <div className="mb-4 flex justify-between">
         <div className="flex-col">
           <h2 className="text-xl font-bold text-gray-100">
