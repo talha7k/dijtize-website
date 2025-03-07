@@ -40,7 +40,6 @@ export function CTASection() {
                     </p>
                     <button
                       onClick={() => {
-                        console.log("Button clicked, setting showForm to true");
                         setShowForm(true);
                       }}
                       className="rounded-xl bg-white px-8 py-3 text-lg font-medium text-black shadow-lg transition-all hover:bg-primary"
