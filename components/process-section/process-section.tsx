@@ -27,7 +27,7 @@ const timelineData = processData.timeline.map((entry: ProcessEntry) => ({
       {entry.content.text.map((paragraph, index) => (
         <p
           key={index}
-          className="mb-8 text-xs font-normal text-neutral-800 dark:text-neutral-200 md:text-sm"
+          className="mb-6 text-xs font-normal text-neutral-800 dark:text-neutral-200 md:text-sm"
         >
           {paragraph}
         </p>
@@ -40,7 +40,7 @@ const timelineData = processData.timeline.map((entry: ProcessEntry) => ({
             alt={image.alt}
             width={image.width}
             height={image.height}
-            className="h-20 w-full md:h-44 lg:h-60"
+            className="h-20 w-full md:h-40"
           />
         ))}
       </div>
