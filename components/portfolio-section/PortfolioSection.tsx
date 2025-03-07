@@ -26,8 +26,18 @@ export function PortfolioSection() {
   ));
 
   return (
-    <section className="py-20 bg-background/10" id="portfolio">
-      <h2 className="text-3xl font-bold text-center mb-10">Our Portfolio</h2>
+    <section id="portfolio" className="bg-white/10 py-16">
+      <div className="container mx-auto px-4">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold text-gray-100 md:text-4xl">
+            Sample Work
+          </h2>
+          <p className="mx-auto max-w-2xl text-gray-400">
+            We take pride in crafting exceptional digital experiences.
+          </p>
+        </div>
+      </div>
+
       <Carousel
         items={portfolioItems}
         enableAutoScroll={true}

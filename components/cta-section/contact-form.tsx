@@ -75,7 +75,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
   };
 
   return (
-    <div className="mx-auto w-full max-w-md rounded-none bg-neutral-900 p-4 shadow-input dark:bg-neutral-900 md:rounded-2xl md:p-8">
+    <div className="mx-auto w-full max-w-md rounded-xl bg-neutral-900 p-6 shadow-input dark:bg-neutral-900 md:rounded-2xl md:p-8">
       <div className="mb-4 flex justify-between">
         <div className="flex-col">
           <h2 className="text-xl font-bold text-gray-100">
@@ -175,6 +175,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
               <ReCAPTCHA
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
                 onChange={handleRecaptchaChange}
+                theme="dark" // Change to "light" for a lighter theme
               />
             </div>
 

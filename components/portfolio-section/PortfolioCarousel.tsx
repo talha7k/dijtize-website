@@ -102,13 +102,13 @@ export const Carousel = ({
     >
       <div className="relative w-full">
         <div
-          className="flex w-full p-8 overflow-x-scroll overscroll-x-auto py-10 md:py-20 scroll-smooth [scrollbar-width:none]"
+          className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-2 [scrollbar-width:none] md:py-3"
           ref={carouselRef}
           onScroll={checkScrollability}
           onMouseEnter={() => setIsAutoScrolling(false)}
           onMouseLeave={() => setIsAutoScrolling(enableAutoScroll)}
         >
-          <div className="flex flex-row justify-start gap-4 pl-4 mx-auto">
+          <div className="mx-auto flex flex-row justify-start gap-4 px-4">
             {items.map((item, index) => (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -130,7 +130,7 @@ export const Carousel = ({
             ))}
           </div>
         </div>
-        <div className="flex justify-end gap-4 mr-10">
+        <div className="mr-10 mt-5 flex justify-end gap-4">
           <Button
             variant="outline" // Use outline for a subtle border effect, similar to your ring-2
             size="lg" // Use lg for a larger size, approximating "xl" (h-11 px-8)

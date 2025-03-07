@@ -52,7 +52,7 @@ export function ProcessSection() {
   return (
     <section id="process" className="w-full bg-white/5 py-20">
       <div className="container mx-auto px-4">
-        <div className="mb-12 text-center">
+        <div className="mb-8 text-center md:mb-1">
           <h2 className="mb-4 text-3xl font-bold md:text-5xl">Our Process</h2>
           <p className="mx-auto max-w-2xl text-neutral-600 dark:text-neutral-400">
             We follow a structured approach to turn your ideas into reality.

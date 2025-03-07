@@ -13,11 +13,11 @@
   --card-foreground: 222.2 84% 4.9%;
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 84% 4.9%;
-  --primary: 190, 100%, 47%;                /* #00b8ef */
-  --primary-foreground: 0, 0%, 100%;         /* White text on primary */
-  --secondary: 225, 70%, 56%;               /* #3c62e0 */
-  --secondary-foreground: 0, 0%, 100%;       /* White text on secondary */
-  --accent: 190, 100%, 60%;                  /* A lighter variant of primary */
+  --primary: 190, 100%, 47%; /* #00b8ef */
+  --primary-foreground: 0, 0%, 100%; /* White text on primary */
+  --secondary: 225, 70%, 56%; /* #3c62e0 */
+  --secondary-foreground: 0, 0%, 100%; /* White text on secondary */
+  --accent: 190, 100%, 60%; /* A lighter variant of primary */
   --accent-foreground: 0, 0%, 100%;
 
   --muted: 210 40% 96.1%;
@@ -41,14 +41,14 @@
   --card-foreground: 210 40% 98%;
   --popover: 222.2 84% 4.9%;
   --popover-foreground: 210 40% 98%;
-  --primary: 190, 100%, 47%;                /* #00b8ef */
-  --primary-foreground: 0, 0%, 100%;         /* White text on primary */
-  --secondary: 225, 70%, 56%;               /* #3c62e0 */
-  --secondary-foreground: 0, 0%, 100%;       /* White text on secondary */
-  --accent: 190, 100%, 60%;                  /* A lighter variant of primary */
+  --primary: 190, 100%, 47%; /* #00b8ef */
+  --primary-foreground: 0, 0%, 100%; /* White text on primary */
+  --secondary: 225, 70%, 56%; /* #3c62e0 */
+  --secondary-foreground: 0, 0%, 100%; /* White text on secondary */
+  --accent: 190, 100%, 60%; /* A lighter variant of primary */
   --accent-foreground: 0, 0%, 100%;
   --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%; 
+  --muted-foreground: 215 20.2% 65.1%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 210 40% 98%;
   --border: 217.2 32.6% 17.5%;
@@ -60,7 +60,8 @@ body {
   color: rgb(var(--foreground-rgb));
   background-color: rgb(var(--background-rgb));
 }
-.modal { /* or whatever class/ID applies */
+.modal {
+  /* or whatever class/ID applies */
   -ms-overflow-style: none;
   scrollbar-width: none;
   z-index: 9999; /* A high value to keep it on top */
@@ -71,8 +72,6 @@ body {
 .text-shadow {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
- 
-
 @layer base {
   html {
     @apply scroll-smooth;
@@ -124,10 +123,9 @@ body {
 }
 
 .animate-scroll {
-  animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+  animation: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
 }
-
-
 
 @layer base {
   * {
@@ -137,4 +135,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
