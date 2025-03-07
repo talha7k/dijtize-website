@@ -1,56 +1,56 @@
 {
-    "portfolio": [
-      {
-        "id": 1,
-        "title": "Mobile App Development",
-        "category": "Mobile Apps",
-        "description": "We create high-performance native and cross-platform mobile apps that deliver superior user experiences.",
-        "image": "https://picsum.photos/200/300",
-        "techStack": [
-          "/services/techstack/react-native.png",
-          "/services/techstack/flutter.png",
-          "/services/techstack/firebase.svg"
-        ],
-        "content": "Our mobile app development services focus on leveraging the full potential of mobile platforms for optimized performance."
-      },
-      {
-        "id": 2,
-        "title": "E-commerce Website",
-        "category": "Web Development",
-        "description": "We build scalable and secure e-commerce websites that drive sales and enhance user experience.",
-        "image": "https://picsum.photos/200/300",
-        "techStack": [
-          "/services/techstack/shopify.png",
-          "/services/techstack/woocommerce.png",
-          "/services/techstack/react.png"
-        ],
-        "content": "Our e-commerce solutions integrate secure payment gateways, intuitive navigation, and scalable architecture."
-      },
-      {
-        "id": 3,
-        "title": "Branding & Logo Design",
-        "category": "Branding",
-        "description": "We craft unique logos and brand identities that reflect your business's personality and values.",
-        "image": "https://picsum.photos/200/300",
-        "techStack": [
-          "/services/techstack/adobe-illustrator.png",
-          "/services/techstack/figma.png",
-          "/services/techstack/canva.png"
-        ],
-        "content": "Our branding services ensure consistency across all platforms and deliver a cohesive message."
-      },
-      {
-        "id": 4,
-        "title": "3D Animation",
-        "category": "Marketing Videos",
-        "description": "We create immersive 3D animations for product visualizations, ads, and cinematic presentations.",
-        "image": "https://picsum.photos/200/300",
-        "techStack": [
-          "/services/techstack/blender.svg",
-          "/services/techstack/cinema-4d.png",
-          "/services/techstack/after-effects.png"
-        ],
-        "content": "Our 3D animations captivate and inform, adding depth and realism to your marketing campaigns."
-      }
-    ]
-  }
+  "portfolio": [
+    {
+      "id": 1,
+      "title": "Mobile App Development",
+      "category": "Mobile Apps",
+      "description": "We create high-performance native and cross-platform mobile apps that deliver superior user experiences.",
+      "image": "https://picsum.photos/200/300",
+      "techStack": [
+        "/services/techstack/react-native.png",
+        "/services/techstack/flutter.png",
+        "/services/techstack/firebase.svg"
+      ],
+      "content": "Our mobile app development services focus on leveraging the full potential of mobile platforms for optimized performance."
+    },
+    {
+      "id": 2,
+      "title": "E-commerce Website",
+      "category": "Web Development",
+      "description": "We build scalable and secure e-commerce websites that drive sales and enhance user experience.",
+      "image": "https://picsum.photos/200/300",
+      "techStack": [
+        "/services/techstack/shopify.png",
+        "/services/techstack/woocommerce.png",
+        "/services/techstack/react.png"
+      ],
+      "content": "Our e-commerce solutions integrate secure payment gateways, intuitive navigation, and scalable architecture."
+    },
+    {
+      "id": 3,
+      "title": "Branding & Logo Design",
+      "category": "Branding",
+      "description": "We craft unique logos and brand identities that reflect your business's personality and values.",
+      "image": "https://picsum.photos/200/300",
+      "techStack": [
+        "/services/techstack/adobe-illustrator.png",
+        "/services/techstack/figma.png",
+        "/services/techstack/canva.png"
+      ],
+      "content": "Our branding services ensure consistency across all platforms and deliver a cohesive message."
+    },
+    {
+      "id": 4,
+      "title": "3D Animation",
+      "category": "Marketing Videos",
+      "description": "We create immersive 3D animations for product visualizations, ads, and cinematic presentations.",
+      "image": "https://picsum.photos/200/300",
+      "techStack": [
+        "/services/techstack/blender.svg",
+        "/services/techstack/cinema-4d.png",
+        "/services/techstack/after-effects.png"
+      ],
+      "content": "Our 3D animations captivate and inform, adding depth and realism to your marketing campaigns."
+    }
+  ]
+}

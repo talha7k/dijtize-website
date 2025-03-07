@@ -1,34 +1,58 @@
 {
-    "testimonials": [
-      {
-        "quote": "This platform has revolutionized our workflow with its intuitive design and robust features.",
-        "name": "Alex Johnson",
-        "designation": "Senior Developer at CodeWorks",
-        "src": "https://picsum.photos/500/500?random=1"
-      },
-      {
-        "quote": "The seamless integration and exceptional support have made this a standout solution for us.",
-        "name": "Priya Patel",
-        "designation": "Project Manager at NextGen",
-        "src": "https://picsum.photos/500/500?random=2"
-      },
-      {
-        "quote": "A game-changer for our team, offering unparalleled flexibility and performance.",
-        "name": "Liam Carter",
-        "designation": "CTO at Innovatech",
-        "src": "https://picsum.photos/500/500?random=3"
-      },
-      {
-        "quote": "The attention to detail and scalability have exceeded our expectations every time.",
-        "name": "Sophie Nguyen",
-        "designation": "Product Lead at ScaleUp",
-        "src": "https://picsum.photos/500/500?random=4"
-      },
-      {
-        "quote": "An outstanding tool that simplifies complex tasks and boosts productivity effortlessly.",
-        "name": "Ethan Brooks",
-        "designation": "Operations Head at FlowSys",
-        "src": "https://picsum.photos/500/500?random=5"
-      }
-    ]
-  }
+  "testimonials": [
+    {
+      "quote": "Their team turned our clunky website into a sleek, lightning-fast masterpiece. It’s like they waved a magic wand over our online presence!",
+      "name": "Grace Robinson",
+      "designation": "Senior Developer at CodeWorks",
+      "src": "/testimonials/1.jpg"
+    },
+    {
+      "quote": "The mobile app they built for us is so smooth, our users keep asking if we hired a Silicon Valley giant. Plus, their support? Absolute rockstars.",
+      "name": "Ava Thompson",
+      "designation": "Project Manager at NextGen",
+      "src": "/testimonials/2.jpg"
+    },
+    {
+      "quote": "Our marketing video went from ‘meh’ to ‘WOW’ overnight. They’ve got a knack for making brands pop off the screen—total game-changer.",
+      "name": "Olivia Bennett",
+      "designation": "CTO at Innovatech",
+      "src": "/testimonials/3.jpg"
+    },
+    {
+      "quote": "Their branding work gave us an identity that screams ‘us’—bold, sharp, and unforgettable. Oh, and their sites scale like a dream!",
+      "name": "Mia Sullivan",
+      "designation": "Product Lead at ScaleUp",
+      "src": "/testimonials/4.jpg"
+    },
+    {
+      "quote": "Complex app workflows? Poof—gone. Their dev team made it feel effortless, and our productivity’s through the roof now.",
+      "name": "Emily Carter",
+      "designation": "Operations Head at FlowSys",
+      "src": "/testimonials/5.jpg"
+    },
+    {
+      "quote": "The website they crafted isn’t just pretty—it’s a lead-generating machine. They nailed our vibe and made us stand out in a crowded market.",
+      "name": "Lucas Hayes",
+      "designation": "Founder of PeakPulse",
+      "src": "/testimonials/6.jpg"
+    },
+    {
+      "quote": "Their marketing videos hit harder than a viral TikTok. Our engagement spiked, and clients can’t stop talking about our new look!",
+      "name": "Ethan Brooks",
+      "designation": "Marketing Director at BrightEdge",
+      "src": "/testimonials/7.jpg"
+    },
+    {
+      "quote": "From a logo that slaps to an app that’s stupidly easy to use, they’ve got the whole package. My team’s obsessed with the results.",
+      "name": "James Nguyen",
+      "designation": "Creative Lead at VibeShift",
+      "src": "/testimonials/8.jpg"
+    },
+    {
+      "quote": "Their branding turned our startup into a legit contender, and the mobile app? Users can’t put it down. Absolute geniuses.",
+      "name": "Noah Clark",
+      "designation": "CEO at LaunchCore",
+      "src": "/testimonials/9.jpg"
+    }
+  ]
+}

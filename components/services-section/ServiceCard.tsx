@@ -10,8 +10,8 @@ interface ServiceCardProps {
 
 export function ServiceCard({ title, icon, subservices }: ServiceCardProps) {
   return (
-    <div className="mb-4 overflow-hidden rounded-xl bg-transparent/20 shadow-md">
-      <div className="px-2 pb-2">
+    <div className="mx-4 mb-4 overflow-hidden rounded-xl bg-transparent/20 md:mx-8">
+      <div className="px-2 pb-2 md:px-4">
         <div className="mb-2 flex flex-col items-center justify-center align-middle">
           <div className="items-center bg-white/5 p-3 px-[100%] py-6">
             {/* Icon Container - Centered and sized */}
