@@ -14,12 +14,11 @@ export function CTASection() {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-[60vh] flex items-center justify-center overflow-hidden bg-white/10"
+      className="relative flex min-h-[60vh] w-full items-center justify-center overflow-hidden bg-white/10 py-14"
     >
-
-      <div className="container mx-auto px-4 z-10 relative">
-        <div className="max-w-4xl mx-auto w-full">
-          <div className="relative inset-0 flex flex-col items-center justify-center text-center p-6 md:p-8">
+      <div className="container relative z-10 mx-auto px-4">
+        <div className="mx-auto w-full max-w-4xl">
+          <div className="relative inset-0 flex flex-col items-center justify-center p-6 text-center md:p-8">
             <AnimatePresence mode="wait">
               {!showForm ? (
                 <motion.div
@@ -30,20 +29,21 @@ export function CTASection() {
                   transition={{ duration: 0.3 }}
                 >
                   <>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 gray-100 leading-tight">
+                    <h2 className="gray-100 mb-6 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
                       Ready to transform your{" "}
                       <span className="text-primary">idea</span> into{" "}
                       <span className="text-primary">digital reality</span>?
                     </h2>
-                    <p className="text-base md:text-lg text-gray-400 mb-8 max-w-3xl leading-relaxed">
-                      Join the innovative companies that trust Dijitize to deliver cutting-edge digital solutions.
+                    <p className="mb-8 max-w-3xl text-base leading-relaxed text-gray-400 md:text-lg">
+                      Join the innovative companies that trust Dijitize to
+                      deliver cutting-edge digital solutions.
                     </p>
                     <button
                       onClick={() => {
                         console.log("Button clicked, setting showForm to true");
                         setShowForm(true);
                       }}
-                      className="px-8 py-3 rounded-xl hover:bg-primary bg-white text-black font-medium text-lg transition-all shadow-lg"
+                      className="rounded-xl bg-white px-8 py-3 text-lg font-medium text-black shadow-lg transition-all hover:bg-primary"
                     >
                       Schedule Consultation
                     </button>

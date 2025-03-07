@@ -27,7 +27,7 @@ const timelineData = processData.timeline.map((entry: ProcessEntry) => ({
       {entry.content.text.map((paragraph, index) => (
         <p
           key={index}
-          className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8"
+          className="mb-8 text-xs font-normal text-neutral-800 dark:text-neutral-200 md:text-sm"
         >
           {paragraph}
         </p>
@@ -40,7 +40,7 @@ const timelineData = processData.timeline.map((entry: ProcessEntry) => ({
             alt={image.alt}
             width={image.width}
             height={image.height}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            className="h-20 w-full md:h-44 lg:h-60"
           />
         ))}
       </div>
@@ -50,15 +50,16 @@ const timelineData = processData.timeline.map((entry: ProcessEntry) => ({
 
 export function ProcessSection() {
   return (
-    <section id="process" className="w-full py-20 bg-white/5">
+    <section id="process" className="w-full bg-white/5 py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Our Process</h2>
-          <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
-            We follow a structured approach to turn your ideas into reality. Here's how we bring your digital vision to life:
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold md:text-5xl">Our Process</h2>
+          <p className="mx-auto max-w-2xl text-neutral-600 dark:text-neutral-400">
+            We follow a structured approach to turn your ideas into reality.
+            Here's how we bring your digital vision to life:
           </p>
         </div>
-        <div className="max-w-3xl mx-auto">
+        <div className="mx-auto max-w-3xl">
           <Timeline data={timelineData} />
         </div>
       </div>

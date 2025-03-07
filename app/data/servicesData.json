@@ -12,7 +12,7 @@
           "/services/techstack/flutter.png",
           "/services/techstack/supabase.svg"
         ],
-        "image": "/services/mobile/native-app.png"
+        "image": "/services/mobile/native-app.svg"
       },
       {
         "subservice": "Cross-Platform App Development",
@@ -22,9 +22,8 @@
           "/services/techstack/flutter.png",
           "/services/techstack/firebase.svg",
           "/services/techstack/supabase.svg"
-
         ],
-        "image": "/services/mobile/cross-platform.png"
+        "image": "/services/mobile/cross-platform.svg"
       },
       {
         "subservice": "Mobile App UI/UX Design",
@@ -34,7 +33,7 @@
           "/services/techstack/adobe-illustrator.png",
           "/services/techstack/flutter.png"
         ],
-        "image": "/services/mobile/ux.png"
+        "image": "/services/mobile/ux.svg"
       },
       {
         "subservice": "Mobile App Maintenance & Support",
@@ -44,9 +43,8 @@
           "/services/techstack/react-native.png",
           "/services/techstack/flutter.png",
           "/services/techstack/supabase.svg"
-
         ],
-        "image": "/services/mobile/maintenance.png"
+        "image": "/services/mobile/support.svg"
       }
     ]
   },
@@ -63,7 +61,7 @@
           "/services/techstack/animate.png",
           "/services/techstack/blender.svg"
         ],
-        "image": "/services/video/explainer.png"
+        "image": "/services/video/explainer.svg"
       },
       {
         "subservice": "2D Animation",
@@ -73,7 +71,7 @@
           "/services/techstack/after-effects.png",
           "/services/techstack/premiere.png"
         ],
-        "image": "/services/video/2d.png"
+        "image": "/services/video/2d.svg"
       },
       {
         "subservice": "3D Animation",
@@ -83,7 +81,7 @@
           "/services/techstack/blender.svg",
           "/services/techstack/after-effects.png"
         ],
-        "image": "/services/video/3d-movie.png"
+        "image": "/services/video/3d.svg"
       },
       {
         "subservice": "Whiteboard Animation",
@@ -93,7 +91,8 @@
           "/services/techstack/animaker.png",
           "/services/techstack/after-effects.png",
           "/services/techstack/premiere.png"
-        ],        "image": "/services/video/whiteboard.png"
+        ],
+        "image": "/services/video/whiteboard.svg"
       },
       {
         "subservice": "Custom Digital Logo Animation",
@@ -101,8 +100,9 @@
         "techStack": [
           "/services/techstack/after-effects.png",
           "/services/techstack/cinema-4d.png",
-          "/services/techstack/blender.svg"        ],
-        "image": "/services/video/logo-animation.png"
+          "/services/techstack/blender.svg"
+        ],
+        "image": "/services/video/logo-animation.svg"
       }
     ]
   },
@@ -120,7 +120,7 @@
           "/services/techstack/canva.png",
           "/services/techstack/figma.png"
         ],
-        "image": "/services/graphics/logo-design.png"
+        "image": "/services/graphics/logo-design.svg"
       },
       {
         "subservice": "Brand Strategy & Messaging",
@@ -132,7 +132,7 @@
           "/services/techstack/coreldraw.png",
           "/services/techstack/figma.png"
         ],
-        "image": "/services/graphics/strategy.png"
+        "image": "/services/graphics/strategy.svg"
       },
       {
         "subservice": "Print & Digital Collateral",
@@ -144,7 +144,7 @@
           "/services/techstack/coreldraw.png",
           "/services/techstack/canva.png"
         ],
-        "image": "/services/graphics/flyer.png"
+        "image": "/services/graphics/flyer.svg"
       },
       {
         "subservice": "Packaging & Merchandise Design",
@@ -156,7 +156,7 @@
           "/services/techstack/canva.png",
           "/services/techstack/figma.png"
         ],
-        "image": "/services/graphics/merchandising.png"
+        "image": "/services/graphics/merchandising.svg"
       }
     ]
   },
@@ -173,7 +173,7 @@
           "/services/techstack/php.png",
           "/services/techstack/react.png"
         ],
-        "image": "/services/web/responsive-design.png"
+        "image": "/services/web/responsive-design.svg"
       },
       {
         "subservice": "E-commerce Development",
@@ -185,7 +185,7 @@
           "/services/techstack/nodejs.png",
           "/services/techstack/react.png"
         ],
-        "image": "/services/web/ecommerce.png"
+        "image": "/services/web/ecommerce.svg"
       },
       {
         "subservice": "Custom Web Applications",
@@ -196,7 +196,7 @@
           "/services/techstack/js.png",
           "/services/techstack/react.png"
         ],
-        "image": "/services/web/custom-web.png"
+        "image": "/services/web/custom-web.svg"
       },
       {
         "subservice": "Web Maintenance & Optimization",
@@ -207,7 +207,7 @@
           "/services/techstack/google-analytics.png",
           "/services/techstack/nodejs.png"
         ],
-        "image": "/services/web/optimization.png"
+        "image": "/services/web/optimization.svg"
       }
     ]
   }
