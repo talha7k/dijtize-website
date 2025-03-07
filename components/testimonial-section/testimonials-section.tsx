@@ -15,9 +15,9 @@ export function TestimonialsSection() {
   const testimonials: Testimonial[] = testimonialsData.testimonials;
 
   return (
-    <section id="testimonials" className="bg-background/10 py-12">
+    <section id="testimonials" className="bg-background/10 py-8">
       <div className="container mx-auto px-4">
-        <div className="my-10 text-center">
+        <div className="my-8 text-center">
           <h2 className="gray-100 mb-4 text-3xl font-bold md:text-4xl">
             Our Feedbacks
           </h2>

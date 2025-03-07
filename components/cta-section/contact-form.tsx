@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
 import { XIcon } from "lucide-react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export function ContactForm({ onClose }: { onClose?: () => void }) {
   const [formData, setFormData] = useState({
@@ -17,6 +18,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -25,11 +27,21 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleRecaptchaChange = (token: string | null) => {
+    setRecaptchaToken(token);
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
     setSuccess(null);
+
+    if (!recaptchaToken) {
+      setError("Please complete the reCAPTCHA verification.");
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const response = await fetch("/api/contact", {
@@ -39,19 +51,23 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
         },
         body: JSON.stringify({
           ...formData,
-          to: "info@dijitize.com", // Recipient email
+          to: "info@dijitize.com",
+          recaptchaToken, // Send the token to the backend
         }),
       });
 
+      const result = await response.json();
+      console.log("API response:", result);
+
       if (!response.ok) {
-        throw new Error("Failed to send email");
+        throw new Error(result.message || "Failed to send email");
       }
 
-      const result = await response.json();
       setSuccess("Your message has been sent successfully!");
       setFormData({ name: "", email: "", message: "" });
-    } catch (err) {
-      setError("Failed to submit the form. Please try again.");
+      setRecaptchaToken(null); // Reset reCAPTCHA after success
+    } catch (err: any) {
+      setError(err.message || "Failed to submit the form. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -127,12 +143,20 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
           />
         </LabelInputContainer>
 
+        {/* Add reCAPTCHA */}
+        <div className="mb-4">
+          <ReCAPTCHA
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} // Use your site key
+            onChange={handleRecaptchaChange}
+          />
+        </div>
+
         {error && <p className="mb-4 text-sm text-red-500">{error}</p>}
         {success && <p className="mb-4 text-sm text-green-500">{success}</p>}
 
         <Button
           type="submit"
-          disabled={isSubmitting}
+          disabled={isSubmitting || !recaptchaToken} // Disable until reCAPTCHA is completed
           className="h-10 w-full rounded-xl bg-white text-lg font-medium text-black shadow-lg transition-all hover:bg-primary"
         >
           {isSubmitting ? "Submitting..." : "Submit"}
