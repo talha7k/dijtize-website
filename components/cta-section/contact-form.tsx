@@ -88,7 +88,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
         </Button>
       )}
 
-      <div className="mt-2 flex flex-col items-center justify-center md:mt-4">
+      <div className="mt-4 flex flex-col items-center justify-center">
         <h2 className="text-xl font-bold text-gray-100">
           Book Your Free Consultation
         </h2>
