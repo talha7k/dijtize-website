@@ -16,9 +16,9 @@ export function CTASection() {
       id="contact"
       className="relative flex min-h-[60vh] w-full items-center justify-center overflow-hidden bg-white/10 py-14"
     >
-      <div className="container relative z-10 mx-auto px-4">
-        <div className="mx-auto w-full max-w-4xl">
-          <div className="relative inset-0 flex flex-col items-center justify-center p-6 text-center md:p-8">
+      <div className="container relative z-10 mx-auto px-2">
+        <div className="mx-auto w-full">
+          <div className="relative inset-0 flex flex-col items-center justify-center p-2 text-center md:p-8">
             <AnimatePresence mode="wait">
               {!showForm ? (
                 <motion.div

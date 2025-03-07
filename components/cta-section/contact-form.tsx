@@ -18,7 +18,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState<boolean>(false); // Changed to boolean for conditional rendering
+  const [success, setSuccess] = useState<boolean>(false);
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const handleChange = (
@@ -58,15 +58,14 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
       });
 
       const result = await response.json();
-      // console.log("API response:", result);
 
       if (!response.ok) {
         throw new Error(result.message || "Failed to send email");
       }
 
-      setSuccess(true); // Set success to true on successful submission
+      setSuccess(true);
       setFormData({ name: "", email: "", message: "" });
-      setRecaptchaToken(null); // Reset reCAPTCHA
+      setRecaptchaToken(null);
     } catch (err: any) {
       setError(err.message || "Failed to submit the form. Please try again.");
     } finally {
@@ -75,59 +74,58 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
   };
 
   return (
-    <div className="m-1 mx-auto w-full max-w-md rounded-xl bg-neutral-900 p-6 shadow-input dark:bg-neutral-900 md:m-3 md:rounded-2xl md:p-8">
-      <div className="mb-4 flex justify-between">
-        <div className="flex-col">
-          <h2 className="text-xl font-bold text-gray-100">
-            Book Your Free Consultation
-          </h2>
-          <p className="mb-2 mt-2 max-w-sm text-sm text-primary">
-            Get expert advice. <br />
-            Schedule a free Zoom consultation today!
-          </p>
-          <p className="mb-6 mt-2 max-w-sm text-sm text-gray-400">
-            Fill out the form below to connect with Dijitize and discuss your
-            digital transformation needs.
-          </p>
-        </div>
-        {onClose && (
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={onClose}
-            className="h-8 w-8 rounded-lg"
-            aria-label="Close form"
-          >
-            <XIcon />
-          </Button>
-        )}
-      </div>
-
-      {success ? (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="rounded-xl bg-white/10 px-5 py-8 text-center"
+    <div className="relative mx-auto w-full max-w-md rounded-xl bg-neutral-900 p-4 pt-8 shadow-input dark:bg-neutral-900 md:p-9">
+      {/* Close Button in Top-Right Corner */}
+      {onClose && (
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={onClose}
+          className="absolute right-4 top-4 h-8 w-8 rounded-lg"
+          aria-label="Close form"
         >
-          <h3 className="mb-2 text-2xl font-semibold text-gray-100">
-            Thank You!
-          </h3>
-          <p className="mx-auto max-w-sm text-sm text-gray-400">
-            Your message has been sent successfully. We'll get back to you soon.
-          </p>
-          <div className="mx-4 mt-10">
-            {onClose && (
-              <Button variant="outline" className="mx-4" onClick={onClose}>
-                Close
-              </Button>
-            )}
-          </div>
-        </motion.div>
-      ) : (
-        // Form Fields
-        <>
-          <form className="my-4" onSubmit={handleSubmit}>
+          <XIcon />
+        </Button>
+      )}
+
+      <div className="mt-2 flex flex-col items-center justify-center md:mt-4">
+        <h2 className="text-xl font-bold text-gray-100">
+          Book Your Free Consultation
+        </h2>
+        <p className="mb-2 mt-2 max-w-sm text-sm text-primary">
+          Get expert advice. <br />
+          Schedule a free Zoom consultation today!
+        </p>
+        <p className="mb-6 mt-2 max-w-sm text-sm text-gray-400">
+          Fill out the form below to connect with Dijitize and discuss your
+          digital transformation needs.
+        </p>
+
+        {success ? (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="rounded-xl bg-white/10 px-5 py-8 text-center"
+          >
+            <h3 className="mb-2 text-2xl font-semibold text-gray-100">
+              Thank You!
+            </h3>
+            <p className="mx-auto max-w-sm text-sm text-gray-400">
+              Your message has been sent successfully. We'll get back to you
+              soon.
+            </p>
+            <div className="mx-4 mt-10">
+              {onClose && (
+                <Button variant="outline" className="mx-4" onClick={onClose}>
+                  Close
+                </Button>
+              )}
+            </div>
+          </motion.div>
+        ) : (
+          // Form Fields
+          <form className="my-4 w-full" onSubmit={handleSubmit}>
             <LabelInputContainer className="mb-4">
               <Label htmlFor="name" className="self-start">
                 Full Name
@@ -189,8 +187,8 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
               {isSubmitting ? "Submitting..." : "Submit"}
             </Button>
           </form>
-        </>
-      )}
+        )}
+      </div>
     </div>
   );
 }
