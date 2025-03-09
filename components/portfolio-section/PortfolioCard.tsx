@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
-
+import { BlurImage } from "./BlurImage";
 interface CardProps {
   card: {
     src: string;
@@ -50,21 +49,13 @@ export const PortfolioCard = ({
         </motion.p>
       </div>
       <div className="absolute inset-0 z-10 overflow-hidden">
-        <Image
-          src={card.src}
+        <BlurImage
+          src={card.src || "/placeholder.svg"}
           alt={card.title}
           width={533}
           height={fullImageHeight}
-          className={`duration-[10000ms] object-cover transition-transform ease-linear ${
-            isHovered
-              ? "translate-y-[var(--translate-distance)]"
-              : "translate-y-0"
-          }`}
-          style={
-            {
-              "--translate-distance": `${translateDistance}px`,
-            } as React.CSSProperties
-          }
+          enableScroll={true}
+          className="object-cover"
         />
       </div>
     </motion.button>

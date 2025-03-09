@@ -7,9 +7,9 @@
         "subservice": "Native App Development",
         "description": "We create high-performance native mobile apps that deliver superior user experiences. Our native development services focus on leveraging the full potential of the mobile platform for optimized performance.",
         "techStack": [
-          "/services/techstack/js.png",
-          "/services/techstack/react-native.png",
-          "/services/techstack/flutter.png",
+          "/services/techstack/js.svg",
+          "/services/techstack/react-native.svg",
+          "/services/techstack/flutter.svg",
           "/services/techstack/supabase.svg"
         ],
         "image": "/services/mobile/native-app.svg"
@@ -18,8 +18,8 @@
         "subservice": "Cross-Platform App Development",
         "description": "Our cross-platform solutions enable you to reach a wider audience without compromising on performance. We build apps that work flawlessly on both iOS and Android, reducing development time and cost.",
         "techStack": [
-          "/services/techstack/react-native.png",
-          "/services/techstack/flutter.png",
+          "/services/techstack/react-native.svg",
+          "/services/techstack/flutter.svg",
           "/services/techstack/firebase.svg",
           "/services/techstack/supabase.svg"
         ],
@@ -29,9 +29,9 @@
         "subservice": "Mobile App UI/UX Design",
         "description": "A great app starts with an intuitive design. We focus on crafting engaging and user-friendly interfaces that enhance the mobile experience, ensuring your app stands out in today's competitive market.",
         "techStack": [
-          "/services/techstack/figma.png",
-          "/services/techstack/adobe-illustrator.png",
-          "/services/techstack/flutter.png"
+          "/services/techstack/figma.svg",
+          "/services/techstack/illustrator.svg",
+          "/services/techstack/flutter.svg"
         ],
         "image": "/services/mobile/ux.svg"
       },
@@ -40,8 +40,8 @@
         "description": "Our maintenance and support services keep your mobile app updated, secure, and performing at its peak. We provide regular updates, bug fixes, and feature enhancements to ensure continuous improvement.",
         "techStack": [
           "/services/techstack/firebase.svg",
-          "/services/techstack/react-native.png",
-          "/services/techstack/flutter.png",
+          "/services/techstack/react-native.svg",
+          "/services/techstack/flutter.svg",
           "/services/techstack/supabase.svg"
         ],
         "image": "/services/mobile/support.svg"
@@ -56,9 +56,9 @@
         "subservice": "Explainer Video Animation",
         "description": "Our explainer video animation service simplifies complex ideas through engaging narratives and dynamic visuals. Perfect for introducing products, explaining services, or educating audiences, these videos capture attention and drive conversions.",
         "techStack": [
-          "/services/techstack/after-effects.png",
-          "/services/techstack/premiere.png",
-          "/services/techstack/animate.png",
+          "/services/techstack/after-effects.svg",
+          "/services/techstack/premiere.svg",
+          "/services/techstack/animate.svg",
           "/services/techstack/blender.svg"
         ],
         "image": "/services/video/explainer.svg"
@@ -67,9 +67,9 @@
         "subservice": "2D Animation",
         "description": "Our 2D animation service brings stories to life with vibrant illustrations and smooth transitions. Ideal for ads, social media content, and educational videos, we deliver creative visuals that resonate with your audience.",
         "techStack": [
-          "/services/techstack/animate.png",
-          "/services/techstack/after-effects.png",
-          "/services/techstack/premiere.png"
+          "/services/techstack/animate.svg",
+          "/services/techstack/after-effects.svg",
+          "/services/techstack/premiere.svg"
         ],
         "image": "/services/video/2d.svg"
       },
@@ -77,9 +77,9 @@
         "subservice": "3D Animation",
         "description": "We craft immersive 3D animations that add depth and realism to your marketing campaigns. Perfect for product visualizations, architectural renderings, and cinematic presentations, our 3D animations captivate and inform.",
         "techStack": [
-          "/services/techstack/cinema-4d.png",
+          "/services/techstack/cinema-4d.svg",
           "/services/techstack/blender.svg",
-          "/services/techstack/after-effects.png"
+          "/services/techstack/after-effects.svg"
         ],
         "image": "/services/video/3d.svg"
       },
@@ -87,10 +87,10 @@
         "subservice": "Whiteboard Animation",
         "description": "Our whiteboard animation service uses hand-drawn illustrations to tell your brand's story in a clear, engaging way. This technique is perfect for educational content and process explanations, making complex ideas accessible.",
         "techStack": [
-          "/services/techstack/videoscribe.png",
-          "/services/techstack/animaker.png",
-          "/services/techstack/after-effects.png",
-          "/services/techstack/premiere.png"
+          "/services/techstack/videoscribe.svg",
+          "/services/techstack/animaker.svg",
+          "/services/techstack/after-effects.svg",
+          "/services/techstack/premiere.svg"
         ],
         "image": "/services/video/whiteboard.svg"
       },
@@ -98,8 +98,8 @@
         "subservice": "Custom Digital Logo Animation",
         "description": "Transform your brand identity with our custom digital logo animation. We animate your logo to create dynamic visuals for intros, presentations, and online content, reinforcing brand recognition and adding a professional touch.",
         "techStack": [
-          "/services/techstack/after-effects.png",
-          "/services/techstack/cinema-4d.png",
+          "/services/techstack/after-effects.svg",
+          "/services/techstack/cinema-4d.svg",
           "/services/techstack/blender.svg"
         ],
         "image": "/services/video/logo-animation.svg"
@@ -114,11 +114,10 @@
         "subservice": "Logo & Identity Design",
         "description": "Craft a memorable visual identity with our custom logo and branding solutions. We create unique logos and brand assets that reflect your business's personality and values, ensuring consistency across all platforms.",
         "techStack": [
-          "/services/techstack/adobe-illustrator.png",
-          "/services/techstack/adobe-photoshop.png",
-          "/services/techstack/coreldraw.png",
-          "/services/techstack/canva.png",
-          "/services/techstack/figma.png"
+          "/services/techstack/illustrator.svg",
+          "/services/techstack/photoshop.svg",
+          "/services/techstack/canva.svg",
+          "/services/techstack/figma.svg"
         ],
         "image": "/services/graphics/logo-design.svg"
       },
@@ -126,11 +125,10 @@
         "subservice": "Brand Strategy & Messaging",
         "description": "Our strategic branding services help define your core message and market positioning. We work closely with you to develop a brand strategy that resonates with your audience and supports long-term growth.",
         "techStack": [
-          "/services/techstack/canva.png",
-          "/services/techstack/adobe-illustrator.png",
-          "/services/techstack/adobe-photoshop.png",
-          "/services/techstack/coreldraw.png",
-          "/services/techstack/figma.png"
+          "/services/techstack/canva.svg",
+          "/services/techstack/illustrator.svg",
+          "/services/techstack/photoshop.svg",
+          "/services/techstack/figma.svg"
         ],
         "image": "/services/graphics/strategy.svg"
       },
@@ -138,11 +136,10 @@
         "subservice": "Print & Digital Collateral",
         "description": "From business cards to social media graphics, our design services cover all your print and digital collateral needs. We ensure every piece of material is aligned with your brand identity and delivers a cohesive message.",
         "techStack": [
-          "/services/techstack/adobe-indesign.png",
-          "/services/techstack/adobe-photoshop.png",
-          "/services/techstack/adobe-illustrator.png",
-          "/services/techstack/coreldraw.png",
-          "/services/techstack/canva.png"
+          "/services/techstack/indesign.svg",
+          "/services/techstack/photoshop.svg",
+          "/services/techstack/illustrator.svg",
+          "/services/techstack/canva.svg"
         ],
         "image": "/services/graphics/flyer.svg"
       },
@@ -150,11 +147,10 @@
         "subservice": "Packaging & Merchandise Design",
         "description": "Stand out on the shelf with innovative packaging and merchandise designs. We combine creativity with functionality to develop packaging that not only protects your product but also tells your brand story.",
         "techStack": [
-          "/services/techstack/adobe-illustrator.png",
-          "/services/techstack/adobe-photoshop.png",
-          "/services/techstack/coreldraw.png",
-          "/services/techstack/canva.png",
-          "/services/techstack/figma.png"
+          "/services/techstack/illustrator.svg",
+          "/services/techstack/photoshop.svg",
+          "/services/techstack/canva.svg",
+          "/services/techstack/figma.svg"
         ],
         "image": "/services/graphics/merchandising.svg"
       }
@@ -168,10 +164,10 @@
         "subservice": "Responsive Website Development",
         "description": "We build responsive websites that deliver a seamless experience across all devices. Our development process focuses on clean design, user-friendly interfaces, and fast loading times to ensure your online presence is both attractive and functional.",
         "techStack": [
-          "/services/techstack/html-5.png",
+          "/services/techstack/html.svg",
           "/services/techstack/wordpress.svg",
-          "/services/techstack/php.png",
-          "/services/techstack/react.png"
+          "/services/techstack/js.svg",
+          "/services/techstack/react.svg"
         ],
         "image": "/services/web/responsive-design.svg"
       },
@@ -179,11 +175,10 @@
         "subservice": "E-commerce Development",
         "description": "Our e-commerce solutions are designed to boost your online sales. We integrate secure payment gateways, intuitive navigation, and scalable architecture to create stores that not only attract customers but also convert visits into revenue.",
         "techStack": [
-          "/services/techstack/shopify.png",
-          "/services/techstack/woocommerce.png",
-          "/services/techstack/magento.png",
-          "/services/techstack/nodejs.png",
-          "/services/techstack/react.png"
+          "/services/techstack/shopify.svg",
+          "/services/techstack/woocommerce.svg",
+          "/services/techstack/nodejs.svg",
+          "/services/techstack/react.svg"
         ],
         "image": "/services/web/ecommerce.svg"
       },
@@ -191,10 +186,10 @@
         "subservice": "Custom Web Applications",
         "description": "From concept to deployment, we develop custom web applications tailored to your business needs. Our solutions are robust, scalable, and designed to integrate seamlessly with your existing systems.",
         "techStack": [
-          "/services/techstack/nodejs.png",
-          "/services/techstack/html-5.png",
-          "/services/techstack/js.png",
-          "/services/techstack/react.png"
+          "/services/techstack/nodejs.svg",
+          "/services/techstack/html.svg",
+          "/services/techstack/js.svg",
+          "/services/techstack/react.svg"
         ],
         "image": "/services/web/custom-web.svg"
       },
@@ -203,9 +198,8 @@
         "description": "We offer ongoing support and optimization to ensure your website remains secure, up-to-date, and performing at its best. Our proactive maintenance service minimizes downtime and keeps your online presence competitive.",
         "techStack": [
           "/services/techstack/wordpress.svg",
-          "/services/techstack/git.png",
-          "/services/techstack/google-analytics.png",
-          "/services/techstack/nodejs.png"
+          "/services/techstack/google-analytics.svg",
+          "/services/techstack/nodejs.svg"
         ],
         "image": "/services/web/optimization.svg"
       }
