@@ -7,9 +7,9 @@
       "description": "Professional lead generation website for consulting services with optimized conversions.",
       "image": "/portfolio/websites/business-consultant-landing-page-533x1867.jpg",
       "techStack": [
-        "/services/techstack/wordpress.png",
+        "/services/techstack/wordpress.svg",
         "/services/techstack/css3.svg",
-        "/services/techstack/react.png"
+        "/services/techstack/react.svg"
       ],
       "content": "Built with integrated CRM and analytics for real-time lead tracking.",
       "case_study": {
@@ -30,9 +30,9 @@
       "description": "Mobile-first website showcasing artisanal coffee products and subscription service.",
       "image": "/portfolio/websites/coffee-shop-landing-533x2367.jpg",
       "techStack": [
-        "/services/techstack/shopify.png",
         "/services/techstack/woocommerce.svg",
-        "/services/techstack/gsap.png"
+        "/services/techstack/wordpress.svg",
+        "/services/techstack/css3.svg"
       ],
       "content": "Integrated with POS system and loyalty program management.",
       "case_study": {
@@ -53,8 +53,9 @@
       "description": "E-commerce platform for a luxury fashion brand with virtual try-on features.",
       "image": "/portfolio/websites/fashion-landing-533x2328.jpg",
       "techStack": [
-        "/services/techstack/magento.png",
-        "/services/techstack/three-js.svg"
+        "/services/techstack/shopify.svg",
+        "/services/techstack/css3.svg",
+        "/services/techstack/html.svg"
       ],
       "content": "Implemented AR-powered product visualization for enhanced engagement.",
       "case_study": {
@@ -75,7 +76,7 @@
       "description": "Elegant and responsive website for a boutique showcasing products and promotions.",
       "image": "/portfolio/websites/boutique-sale-page-533x1981.jpg",
       "techStack": [
-        "/services/techstack/shopify.png",
+        "/services/techstack/wordpress.svg",
         "/services/techstack/woocommerce.svg",
         "/services/techstack/css3.svg"
       ],
@@ -98,9 +99,9 @@
       "description": "Vibrant and refreshing website for a juice shop with online ordering capabilities.",
       "image": "/portfolio/websites/juice-shop-landing-page-533x2569.jpg",
       "techStack": [
-        "/services/techstack/wordpress.png",
+        "/services/techstack/wordpress.svg",
         "/services/techstack/woocommerce.svg",
-        "/services/techstack/php.png"
+        "/services/techstack/css3.svg"
       ],
       "content": "Integrated with delivery APIs for real-time order tracking.",
       "case_study": {
@@ -121,9 +122,9 @@
       "description": "Trustworthy and user-friendly website for babysitting services with booking functionality.",
       "image": "/portfolio/websites/babysitter-landing-page-1-533x1752.jpg",
       "techStack": [
-        "/services/techstack/react.png",
-        "/services/techstack/firebase.png",
-        "/services/techstack/nodejs.png"
+        "/services/techstack/react.svg",
+        "/services/techstack/firebase.svg",
+        "/services/techstack/nodejs.svg"
       ],
       "content": "Includes real-time availability tracking and secure payment integration.",
       "case_study": {
@@ -144,9 +145,8 @@
       "description": "Professional and secure website for a medical practice with appointment scheduling.",
       "image": "/portfolio/websites/doctors-office-landing-page-533x1989.jpg",
       "techStack": [
-        "/services/techstack/wordpress.png",
-        "/services/techstack/hipaa.png",
-        "/services/techstack/php.png"
+        "/services/techstack/wordpress.svg",
+        "/services/techstack/js.svg"
       ],
       "content": "HIPAA-compliant with patient portal and telehealth integration.",
       "case_study": {
@@ -167,9 +167,9 @@
       "description": "Dynamic website for a car dealership with inventory management and test drive scheduling.",
       "image": "/portfolio/websites/car-dealer-landing-page-533x2076.jpg",
       "techStack": [
-        "/services/techstack/react.png",
-        "/services/techstack/nodejs.png",
-        "/services/techstack/mongodb.png"
+        "/services/techstack/react.svg",
+        "/services/techstack/nodejs.svg",
+        "/services/techstack/firebase.svg"
       ],
       "content": "Includes advanced search filters and vehicle comparison tools.",
       "case_study": {
@@ -190,9 +190,9 @@
       "description": "Elegant and romantic website for wedding planning services with portfolio showcase.",
       "image": "/portfolio/websites/wedding-planner-landing-page-533x1975.jpg",
       "techStack": [
-        "/services/techstack/wordpress.png",
+        "/services/techstack/wordpress.svg",
         "/services/techstack/css3.svg",
-        "/services/techstack/javascript.png"
+        "/services/techstack/js.svg"
       ],
       "content": "Includes event galleries, client testimonials, and package customization.",
       "case_study": {
@@ -213,9 +213,8 @@
       "description": "Robust and professional website for a construction company with project showcases.",
       "image": "/portfolio/websites/construction-company-landing-page-533x1818.jpg",
       "techStack": [
-        "/services/techstack/html5.png",
-        "/services/techstack/bootstrap.png",
-        "/services/techstack/php.png"
+        "/services/techstack/html.svg",
+        "/services/techstack/js.svg"
       ],
       "content": "Includes project timelines, client testimonials, and service areas.",
       "case_study": {
@@ -236,9 +235,9 @@
       "description": "Professional website for a carpentry business showcasing craftsmanship and services.",
       "image": "/portfolio/websites/carpenter-landinge-page-533x2158.jpg",
       "techStack": [
-        "/services/techstack/wordpress.png",
+        "/services/techstack/wordpress.svg",
         "/services/techstack/css3.svg",
-        "/services/techstack/javascript.png"
+        "/services/techstack/js.svg"
       ],
       "content": "Includes portfolio galleries, service descriptions, and client testimonials.",
       "case_study": {
@@ -259,9 +258,9 @@
       "description": "User-friendly website for a moving company with booking and quote request features.",
       "image": "/portfolio/websites/moving-company-landing-page-533x1695.jpg",
       "techStack": [
-        "/services/techstack/react.png",
-        "/services/techstack/nodejs.png",
-        "/services/techstack/mongodb.png"
+        "/services/techstack/react.svg",
+        "/services/techstack/nodejs.svg",
+        "/services/techstack/firebase.svg"
       ],
       "content": "Includes real-time quote calculations and booking management.",
       "case_study": {
@@ -282,9 +281,9 @@
       "description": "Professional website for an auto repair shop with service booking and customer reviews.",
       "image": "/portfolio/websites/auto-repair-landing-page-1-533x2595.jpg",
       "techStack": [
-        "/services/techstack/wordpress.png",
+        "/services/techstack/wordpress.svg",
         "/services/techstack/css3.svg",
-        "/services/techstack/javascript.png"
+        "/services/techstack/js.svg"
       ],
       "content": "Includes service descriptions, customer reviews, and booking functionality.",
       "case_study": {
@@ -305,9 +304,8 @@
       "description": "Professional website for a home improvement company showcasing services and projects.",
       "image": "/portfolio/websites/home-improvement-landing-page-533x2537.jpg",
       "techStack": [
-        "/services/techstack/wordpress.png",
-        "/services/techstack/css3.svg",
-        "/services/techstack/javascript.png"
+        "/services/techstack/wordpress.svg",
+        "/services/techstack/css3.svg"
       ],
       "content": "Includes project galleries, service descriptions, and client testimonials.",
       "case_study": {
@@ -328,9 +326,9 @@
       "description": "Vibrant and engaging website for a donut shop with online ordering capabilities.",
       "image": "/portfolio/websites/donut-shop-landing-page-533x1883.jpg",
       "techStack": [
-        "/services/techstack/shopify.png",
+        "/services/techstack/wordpress.svg",
         "/services/techstack/woocommerce.svg",
-        "/services/techstack/php.png"
+        "/services/techstack/css3.svg"
       ],
       "content": "Integrated with delivery APIs for real-time order tracking.",
       "case_study": {
@@ -351,9 +349,9 @@
       "description": "Modern and stylish website for a barber shop with appointment booking and gallery.",
       "image": "/portfolio/websites/barber-shop-landing-page-533x1867.jpg",
       "techStack": [
-        "/services/techstack/wordpress.png",
+        "/services/techstack/wordpress.svg",
         "/services/techstack/css3.svg",
-        "/services/techstack/javascript.png"
+        "/services/techstack/js.svg"
       ],
       "content": "Includes service descriptions, appointment booking, and customer reviews.",
       "case_study": {
@@ -374,9 +372,9 @@
       "description": "Elegant and appetizing website for an Italian restaurant with online reservations.",
       "image": "/portfolio/websites/italian-restaurant-landing-page-533x1708.jpg",
       "techStack": [
-        "/services/techstack/wordpress.png",
+        "/services/techstack/wordpress.svg",
         "/services/techstack/css3.svg",
-        "/services/techstack/javascript.png"
+        "/services/techstack/js.svg"
       ],
       "content": "Includes menu showcase, reservation system, and customer reviews.",
       "case_study": {

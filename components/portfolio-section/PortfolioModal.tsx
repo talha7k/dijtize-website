@@ -36,7 +36,6 @@ export function PortfolioModal({
   portfolioItem,
 }: PortfolioModalProps) {
   const [isDemoOpen, setIsDemoOpen] = useState(false);
-  const fullImageHeight = 2367; // Still needed for image prop
 
   const formatTechName = (url: string) => {
     return (
@@ -65,44 +64,46 @@ export function PortfolioModal({
         <DialogContent className="modal scrollbar-hidden flex max-h-[95vh] max-w-[90vw] items-center justify-center rounded-xl bg-transparent/55 p-5 backdrop-blur-sm">
           <div className="relative mt-6 max-h-[75vh] w-full overflow-y-auto px-2 py-3 md:p-8">
             <DialogHeader>
-              <DialogTitle className="text-center text-3xl font-bold text-gray-100">
+              <DialogTitle className="text-center text-3xl font-bold">
                 {portfolioItem.title}
               </DialogTitle>
             </DialogHeader>
 
             <div className="mt-6 flex grid-cols-[45%_45%] flex-col gap-8 sm:grid">
               {/* Image Container */}
+
               <div
-                className="relative max-h-[85vh] min-h-[100px] w-full cursor-pointer overflow-hidden rounded-lg transition-transform duration-300 sm:h-auto sm:w-auto"
+                className="relative max-h-[85vh] min-h-[100px] w-full cursor-pointer rounded-lg transition-transform duration-300 sm:h-auto sm:w-auto"
                 onClick={handleImageClick}
               >
-                {" "}
                 <BlurImage
                   src={portfolioItem.image || "/placeholder.svg"}
                   alt={portfolioItem.title}
                   width={533}
-                  height={fullImageHeight}
-                  enableScroll={true}
-                  hover={"View Live Demo"}
-                  className="object-cover"
+                  height={2000}
+                  hover={<span className="text-lg">View Live Demo</span>}
+                  className="w-full"
                 />
               </div>
 
               {/* Content Section */}
               <div className="w-full sm:w-auto">
-                <div className="mb-6 text-base text-gray-300">
+                <div className="mb-6 text-base">
                   <p className="text-primary">
                     <strong>Category:</strong> {portfolioItem.category}
                   </p>
-                  <br />
-                  <p>{portfolioItem.description}</p>
-                  <p>{portfolioItem.content}</p>
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-6 text-gray-100">
                   <strong>Case Study:</strong>
                   <p>{portfolioItem.case_study.client}</p>
+                  <br />
                   <p>{portfolioItem.case_study.solution}</p>
+                  <br />
+                  <strong>Delivered:</strong>
+
+                  <p>{portfolioItem.description}</p>
+                  <p>{portfolioItem.content}</p>
                   <br />
                   <p>
                     <strong>Results:</strong>

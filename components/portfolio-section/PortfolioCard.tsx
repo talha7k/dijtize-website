@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { BlurImage } from "./BlurImage";
+
 interface CardProps {
   card: {
     src: string;
@@ -21,9 +22,6 @@ export const PortfolioCard = ({
   onOpen,
 }: CardProps) => {
   const [isHovered, setIsHovered] = useState(false);
-  const fullImageHeight = 2367; // Adjust based on tallest image
-  const cardHeightPx = 256; // Matches h-64 (16rem = 256px), adjust for md:h-[21rem] if needed
-  const translateDistance = -(fullImageHeight - cardHeightPx);
 
   return (
     <motion.button
@@ -53,8 +51,12 @@ export const PortfolioCard = ({
           src={card.src || "/placeholder.svg"}
           alt={card.title}
           width={533}
-          height={fullImageHeight}
-          enableScroll={true}
+          height={2000} // Initial height, dynamically updated by BlurImage
+          hover={
+            <span className="text-lg font-semibold text-white">
+              View Live Demo
+            </span>
+          }
           className="object-cover"
         />
       </div>
