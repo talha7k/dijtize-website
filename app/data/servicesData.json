@@ -169,7 +169,7 @@
         "description": "We build responsive websites that deliver a seamless experience across all devices. Our development process focuses on clean design, user-friendly interfaces, and fast loading times to ensure your online presence is both attractive and functional.",
         "techStack": [
           "/services/techstack/html-5.png",
-          "/services/techstack/wordpress.png",
+          "/services/techstack/wordpress.svg",
           "/services/techstack/php.png",
           "/services/techstack/react.png"
         ],
@@ -202,7 +202,7 @@
         "subservice": "Web Maintenance & Optimization",
         "description": "We offer ongoing support and optimization to ensure your website remains secure, up-to-date, and performing at its best. Our proactive maintenance service minimizes downtime and keeps your online presence competitive.",
         "techStack": [
-          "/services/techstack/wordpress.png",
+          "/services/techstack/wordpress.svg",
           "/services/techstack/git.png",
           "/services/techstack/google-analytics.png",
           "/services/techstack/nodejs.png"

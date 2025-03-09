@@ -1,11 +1,13 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Carousel } from "./PortfolioCarousel";
 import { PortfolioCard } from "./PortfolioCard";
+import { PortfolioModal } from "./PortfolioModal";
 import portfolio from "@/app/data/portfolioData.json";
 
 export function PortfolioSection() {
-  // Map portfolio data to PortfolioCard components
+  const [selectedItem, setSelectedItem] = useState<any>(null);
+
   const portfolioItems = portfolio.portfolio.map((item, index) => (
     <PortfolioCard
       key={item.id}
@@ -13,15 +15,10 @@ export function PortfolioSection() {
         src: item.image,
         title: item.title,
         category: item.category,
-        content: item.content, // Included but not currently used in display
+        content: item.content,
       }}
       index={index}
-      service={{
-        subservice: item.title, // Maps to modal title
-        description: item.description, // Maps to modal description
-        techStack: item.techStack, // Maps to modal tech stack
-        image: item.image, // Maps to modal image
-      }}
+      onOpen={() => setSelectedItem(item)}
     />
   ));
 
@@ -42,6 +39,12 @@ export function PortfolioSection() {
         items={portfolioItems}
         enableAutoScroll={true}
         autoScrollInterval={5000}
+      />
+
+      <PortfolioModal
+        isOpen={!!selectedItem}
+        onClose={() => setSelectedItem(null)}
+        portfolioItem={selectedItem}
       />
     </section>
   );
