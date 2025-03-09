@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import type { Subservice } from "@/app/data/types";
 import { SubserviceCard } from "./SubserviceCard";
 import { ServiceModal } from "./ServiceModal";
@@ -14,21 +14,13 @@ import {
 
 interface ServiceCarouselProps {
   subservices: Subservice[];
-  autoScrollInterval?: number;
-  enableAutoScroll?: boolean;
 }
 
-export function ServiceCarousel({
-  subservices,
-  autoScrollInterval = 4000,
-  enableAutoScroll = true,
-}: ServiceCarouselProps) {
+export function ServiceCarousel({ subservices }: ServiceCarouselProps) {
   const [selectedService, setSelectedService] = useState<Subservice | null>(
     null,
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isAutoScrolling, setIsAutoScrolling] = useState(enableAutoScroll);
-  const carouselRef = useRef<HTMLDivElement>(null);
 
   const handleServiceClick = (service: Subservice) => {
     setSelectedService(service);
@@ -39,34 +31,14 @@ export function ServiceCarousel({
     setIsModalOpen(false);
   };
 
-  useEffect(() => {
-    let autoScrollTimer: NodeJS.Timeout;
-
-    if (isAutoScrolling && enableAutoScroll) {
-      autoScrollTimer = setInterval(() => {
-        if (carouselRef.current) {
-          const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-          if (scrollLeft + clientWidth >= scrollWidth) {
-            carouselRef.current.scrollTo({ left: 0, behavior: "smooth" });
-          } else {
-            carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
-          }
-        }
-      }, autoScrollInterval);
-    }
-
-    return () => clearInterval(autoScrollTimer);
-  }, [isAutoScrolling, enableAutoScroll, autoScrollInterval]);
-
   return (
-    <div className="w-full py-6" ref={carouselRef}>
+    <div className="w-full py-6">
       <Carousel
         opts={{
+          loop: true,
           align: "start",
         }}
         className="w-full"
-        onMouseEnter={() => setIsAutoScrolling(false)}
-        onMouseLeave={() => setIsAutoScrolling(enableAutoScroll)}
       >
         <CarouselContent className="-ml-4 md:-ml-6">
           {subservices.map((service, index) => (

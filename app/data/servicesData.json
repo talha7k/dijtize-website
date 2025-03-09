@@ -56,7 +56,7 @@
         "subservice": "Explainer Video Animation",
         "description": "Our explainer video animation service simplifies complex ideas through engaging narratives and dynamic visuals. Perfect for introducing products, explaining services, or educating audiences, these videos capture attention and drive conversions.",
         "techStack": [
-          "/services/techstack/after-effects.svg",
+          "/services/techstack/after-effects.png",
           "/services/techstack/premiere.svg",
           "/services/techstack/animate.svg",
           "/services/techstack/blender.svg"
@@ -68,7 +68,7 @@
         "description": "Our 2D animation service brings stories to life with vibrant illustrations and smooth transitions. Ideal for ads, social media content, and educational videos, we deliver creative visuals that resonate with your audience.",
         "techStack": [
           "/services/techstack/animate.svg",
-          "/services/techstack/after-effects.svg",
+          "/services/techstack/after-effects.png",
           "/services/techstack/premiere.svg"
         ],
         "image": "/services/video/2d.svg"
@@ -77,9 +77,8 @@
         "subservice": "3D Animation",
         "description": "We craft immersive 3D animations that add depth and realism to your marketing campaigns. Perfect for product visualizations, architectural renderings, and cinematic presentations, our 3D animations captivate and inform.",
         "techStack": [
-          "/services/techstack/cinema-4d.svg",
           "/services/techstack/blender.svg",
-          "/services/techstack/after-effects.svg"
+          "/services/techstack/after-effects.png"
         ],
         "image": "/services/video/3d.svg"
       },
@@ -87,9 +86,9 @@
         "subservice": "Whiteboard Animation",
         "description": "Our whiteboard animation service uses hand-drawn illustrations to tell your brand's story in a clear, engaging way. This technique is perfect for educational content and process explanations, making complex ideas accessible.",
         "techStack": [
-          "/services/techstack/videoscribe.svg",
-          "/services/techstack/animaker.svg",
-          "/services/techstack/after-effects.svg",
+          "/services/techstack/videoscribe.png",
+          "/services/techstack/animaker.png",
+          "/services/techstack/after-effects.png",
           "/services/techstack/premiere.svg"
         ],
         "image": "/services/video/whiteboard.svg"
@@ -98,8 +97,8 @@
         "subservice": "Custom Digital Logo Animation",
         "description": "Transform your brand identity with our custom digital logo animation. We animate your logo to create dynamic visuals for intros, presentations, and online content, reinforcing brand recognition and adding a professional touch.",
         "techStack": [
-          "/services/techstack/after-effects.svg",
-          "/services/techstack/cinema-4d.svg",
+          "/services/techstack/after-effects.png",
+          "/services/techstack/animate.svg",
           "/services/techstack/blender.svg"
         ],
         "image": "/services/video/logo-animation.svg"
