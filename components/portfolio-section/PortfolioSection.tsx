@@ -37,7 +37,7 @@ export function PortfolioSection() {
 
       <Carousel
         items={portfolioItems}
-        enableAutoScroll={true}
+        enableAutoScroll={false}
         autoScrollInterval={5000}
       />
 

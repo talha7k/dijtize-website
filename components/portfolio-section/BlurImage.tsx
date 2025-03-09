@@ -1,37 +1,107 @@
 "use client";
 import Image, { ImageProps } from "next/image";
-import { useState, ReactNode } from "react";
+import { useState, useRef, useEffect, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-interface BlurImageProps extends Omit<ImageProps, "height"> {
-  enableScroll?: boolean; // Enable scrolling on hover
+interface BlurImageProps extends Omit<ImageProps, "width" | "height"> {
+  src: string; // Assumes src contains dimensions like "car-dealer-landing-page-533x2076.jpg"
+  enableScroll?: boolean; // Enable scrolling on hover (if autoScroll is false)
   autoScroll?: boolean; // Automatically enable scrolling
-  scrollSpeed?: number; // Duration of one scroll cycle in seconds
+  scrollSpeed?: number; // Base speed in pixels per second (default: 50)
+  hoverScrollSpeed?: number; // Speed in pixels per second when hovered (optional)
   hover?: ReactNode; // Content to show on hover (e.g., "View Live Demo")
 }
 
+const extractDimensions = (
+  src: string,
+): { width: number; height: number } | null => {
+  // Extracts dimensions from a filename with the pattern "-{width}x{height}."
+  const match = src.match(/-(\d+)x(\d+)\./);
+  if (match) {
+    return { width: parseInt(match[1], 10), height: parseInt(match[2], 10) };
+  }
+  return null;
+};
+
 export const BlurImage = ({
-  width,
   src,
   className,
   alt,
   enableScroll = false,
   autoScroll = true,
-  scrollSpeed = 200, // Default to 30 seconds
+  scrollSpeed = 50, // base pixels per second
+  hoverScrollSpeed = 150, // optional different speed on hover
   hover,
   ...rest
 }: BlurImageProps) => {
   const [isLoading, setLoading] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
-  const [imageHeight, setImageHeight] = useState<number>(0);
 
-  // Determine if scrolling animation should be applied
+  // Extract dimensions from the image URL.
+  const dimensions = extractDimensions(src);
+  const width = dimensions?.width || 500;
+  const imageHeight = dimensions?.height || 300;
+
+  // Refs to control animation state.
+  const containerRef = useRef<HTMLDivElement>(null);
+  const offsetRef = useRef<number>(0);
+  const animationFrameRef = useRef<number | null>(null);
+  const lastTimestampRef = useRef<number | null>(null);
+
+  // Determine if scrolling should be active.
   const shouldScroll = autoScroll || (enableScroll && isHovered);
+
+  useEffect(() => {
+    const animate = (timestamp: number) => {
+      if (lastTimestampRef.current === null) {
+        lastTimestampRef.current = timestamp;
+      }
+      const deltaTime = (timestamp - lastTimestampRef.current) / 1000; // in seconds
+      lastTimestampRef.current = timestamp;
+
+      // Determine effective scroll speed:
+      const effectiveSpeed =
+        isHovered && hoverScrollSpeed ? hoverScrollSpeed : scrollSpeed;
+
+      if (containerRef.current && (autoScroll || (enableScroll && isHovered))) {
+        // Increase offset based on effective speed and elapsed time.
+        offsetRef.current =
+          (offsetRef.current + effectiveSpeed * deltaTime) % imageHeight;
+        containerRef.current.style.transform = `translateY(-${offsetRef.current}px)`;
+      }
+      animationFrameRef.current = requestAnimationFrame(animate);
+    };
+
+    if (shouldScroll) {
+      animationFrameRef.current = requestAnimationFrame(animate);
+    } else {
+      // Pause the animation.
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+        animationFrameRef.current = null;
+      }
+      lastTimestampRef.current = null;
+    }
+
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
+  }, [
+    shouldScroll,
+    scrollSpeed,
+    hoverScrollSpeed,
+    imageHeight,
+    autoScroll,
+    enableScroll,
+    isHovered,
+  ]);
 
   return (
     <div
       className={cn("relative max-h-[85vh] w-full overflow-hidden rounded-xl")}
-      style={{ height: imageHeight || "auto" }} // Set container height once measured
+      style={{ height: imageHeight }}
       onMouseEnter={() => {
         if (enableScroll || hover) setIsHovered(true);
       }}
@@ -39,10 +109,8 @@ export const BlurImage = ({
         if (enableScroll || hover) setIsHovered(false);
       }}
     >
-      {/* Container for infinite scrolling */}
-      <div
-        className={cn("flex flex-col", shouldScroll ? "animate-scroll" : "")}
-      >
+      {/* Container that will be animated via JavaScript */}
+      <div ref={containerRef} className="flex flex-col">
         {/* Primary image */}
         <Image
           className={cn(
@@ -53,15 +121,11 @@ export const BlurImage = ({
           )}
           src={src}
           width={width}
-          // Provide a dummy height until the image loads.
-          height={imageHeight || 200}
-          onLoadingComplete={(img) => {
-            setImageHeight(img.naturalHeight);
-            setLoading(false);
-          }}
+          height={imageHeight}
+          onLoadingComplete={() => setLoading(false)}
           loading="lazy"
           decoding="async"
-          blurDataURL={typeof src === "string" ? src : undefined}
+          blurDataURL={src}
           alt={alt || "Background of a beautiful view"}
           {...rest}
         />
@@ -76,10 +140,10 @@ export const BlurImage = ({
             )}
             src={src}
             width={width}
-            height={imageHeight || 200}
+            height={imageHeight}
             loading="lazy"
             decoding="async"
-            blurDataURL={typeof src === "string" ? src : undefined}
+            blurDataURL={src}
             alt={alt || "Background of a beautiful view (duplicate)"}
             {...rest}
           />
@@ -96,23 +160,6 @@ export const BlurImage = ({
         >
           {hover}
         </div>
-      )}
-
-      {/* Animation keyframes updated dynamically */}
-      {(autoScroll || enableScroll) && imageHeight > 0 && (
-        <style jsx key={`scroll-${scrollSpeed}-${imageHeight}`}>{`
-          @keyframes scroll {
-            0% {
-              transform: translateY(0);
-            }
-            100% {
-              transform: translateY(-${imageHeight}px);
-            }
-          }
-          .animate-scroll {
-            animation: scroll ${scrollSpeed}s linear infinite;
-          }
-        `}</style>
       )}
     </div>
   );
