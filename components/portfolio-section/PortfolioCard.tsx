@@ -50,8 +50,6 @@ export const PortfolioCard = ({
         <BlurImage
           src={card.src || "/placeholder.svg"}
           alt={card.title}
-          width={533}
-          enableScroll={true}
           className="object-cover"
         />
       </div>

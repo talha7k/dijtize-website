@@ -79,7 +79,6 @@ export function PortfolioModal({
                 <BlurImage
                   src={portfolioItem.image || "/placeholder.svg"}
                   alt={portfolioItem.title}
-                  enableScroll={true}
                   hover={<span className="text-lg">View Live Demo</span>}
                   className="object-cover"
                 />
