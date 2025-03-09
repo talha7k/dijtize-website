@@ -3,75 +3,84 @@ import Image, { ImageProps } from "next/image";
 import { useState, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-interface BlurImageProps extends ImageProps {
-  autoScroll?: boolean; // Enable automatic continuous scrolling
+interface BlurImageProps extends Omit<ImageProps, "height"> {
+  enableScroll?: boolean; // Enable scrolling on hover
+  autoScroll?: boolean; // Automatically enable scrolling
+  scrollSpeed?: number; // Duration of one scroll cycle in seconds
   hover?: ReactNode; // Content to show on hover (e.g., "View Live Demo")
 }
 
 export const BlurImage = ({
-  height,
   width,
   src,
   className,
   alt,
-  autoScroll = false,
+  enableScroll = false,
+  autoScroll = true,
+  scrollSpeed = 200, // Default to 30 seconds
   hover,
   ...rest
 }: BlurImageProps) => {
   const [isLoading, setLoading] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
+  const [imageHeight, setImageHeight] = useState<number>(0);
 
-  // Use the provided height for scrolling distance
-  const imageHeight =
-    typeof height === "number" ? height : parseInt(height as string, 10) || 0;
+  // Determine if scrolling animation should be applied
+  const shouldScroll = autoScroll || (enableScroll && isHovered);
 
   return (
     <div
-      className={cn("relative h-full w-full overflow-hidden")}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className={cn("relative max-h-[85vh] w-full overflow-hidden rounded-xl")}
+      style={{ height: imageHeight || "auto" }} // Set container height once measured
+      onMouseEnter={() => {
+        if (enableScroll || hover) setIsHovered(true);
+      }}
+      onMouseLeave={() => {
+        if (enableScroll || hover) setIsHovered(false);
+      }}
     >
-      {/* Container for continuous scrolling */}
+      {/* Container for infinite scrolling */}
       <div
-        className={cn(
-          "flex flex-col",
-          autoScroll ? "animate-continuous-scroll" : "",
-        )}
-        style={{ height: autoScroll ? `${imageHeight * 2}px` : "auto" }} // Double height for seamless loop
+        className={cn("flex flex-col", shouldScroll ? "animate-scroll" : "")}
       >
+        {/* Primary image */}
         <Image
           className={cn(
-            "h-auto w-full transition duration-300", // Base blur and size
+            "w-full transition duration-300",
             isLoading ? "blur-sm" : "blur-0",
-            autoScroll ? "object-cover" : "",
+            autoScroll || enableScroll ? "object-cover" : "",
             className,
           )}
-          onLoad={() => setLoading(false)}
           src={src}
           width={width}
-          height={height}
+          // Provide a dummy height until the image loads.
+          height={imageHeight || 200}
+          onLoadingComplete={(img) => {
+            setImageHeight(img.naturalHeight);
+            setLoading(false);
+          }}
           loading="lazy"
           decoding="async"
           blurDataURL={typeof src === "string" ? src : undefined}
-          alt={alt ? alt : "Background of a beautiful view"}
+          alt={alt || "Background of a beautiful view"}
           {...rest}
         />
-        {/* Duplicate image for continuous scroll */}
-        {autoScroll && (
+        {/* Duplicate image for seamless looping */}
+        {(autoScroll || enableScroll) && (
           <Image
             className={cn(
-              "h-auto w-full transition duration-300",
+              "w-full transition duration-300",
               isLoading ? "blur-sm" : "blur-0",
-              autoScroll ? "object-cover" : "",
+              autoScroll || enableScroll ? "object-cover" : "",
               className,
             )}
             src={src}
             width={width}
-            height={height}
+            height={imageHeight || 200}
             loading="lazy"
             decoding="async"
             blurDataURL={typeof src === "string" ? src : undefined}
-            alt={alt ? alt : "Background of a beautiful view (duplicate)"}
+            alt={alt || "Background of a beautiful view (duplicate)"}
             {...rest}
           />
         )}
@@ -89,10 +98,10 @@ export const BlurImage = ({
         </div>
       )}
 
-      {/* Animation keyframes for continuous scroll */}
-      {autoScroll && (
-        <style jsx>{`
-          @keyframes continuous-scroll {
+      {/* Animation keyframes updated dynamically */}
+      {(autoScroll || enableScroll) && imageHeight > 0 && (
+        <style jsx key={`scroll-${scrollSpeed}-${imageHeight}`}>{`
+          @keyframes scroll {
             0% {
               transform: translateY(0);
             }
@@ -100,8 +109,8 @@ export const BlurImage = ({
               transform: translateY(-${imageHeight}px);
             }
           }
-          .animate-continuous-scroll {
-            animation: continuous-scroll ${imageHeight / 50}s linear infinite; /* Adjustable speed */
+          .animate-scroll {
+            animation: scroll ${scrollSpeed}s linear infinite;
           }
         `}</style>
       )}

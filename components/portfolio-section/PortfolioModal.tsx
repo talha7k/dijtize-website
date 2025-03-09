@@ -73,16 +73,16 @@ export function PortfolioModal({
               {/* Image Container */}
 
               <div
-                className="relative max-h-[85vh] min-h-[100px] w-full cursor-pointer rounded-lg transition-transform duration-300 sm:h-auto sm:w-auto"
+                className="relative max-h-[85vh] min-h-[100px] w-full cursor-pointer rounded-xl transition-transform duration-300 sm:h-auto sm:w-auto"
                 onClick={handleImageClick}
               >
                 <BlurImage
                   src={portfolioItem.image || "/placeholder.svg"}
                   alt={portfolioItem.title}
                   width={533}
-                  height={2000}
+                  enableScroll={true}
                   hover={<span className="text-lg">View Live Demo</span>}
-                  className="w-full"
+                  className="object-cover"
                 />
               </div>
 

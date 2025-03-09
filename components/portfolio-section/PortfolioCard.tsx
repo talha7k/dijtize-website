@@ -51,12 +51,7 @@ export const PortfolioCard = ({
           src={card.src || "/placeholder.svg"}
           alt={card.title}
           width={533}
-          height={2000} // Initial height, dynamically updated by BlurImage
-          hover={
-            <span className="text-lg font-semibold text-white">
-              View Live Demo
-            </span>
-          }
+          enableScroll={true}
           className="object-cover"
         />
       </div>
