@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-  <ellipse style="fill: rgb(238, 235, 255);" cx="250" cy="250" rx="238.385" ry="238.385"/>
   <title>mobile</title>
-  <g id="mobile" transform="matrix(6.34515, 0, 0, 6.34515, 40.610051, 43.782625)" style="">
-    <path class="cls-1" d="M16.14,5H49.86A3.14,3.14,0,0,1,53,8.14V52a0,0,0,0,1,0,0H13a0,0,0,0,1,0,0V8.14A3.14,3.14,0,0,1,16.14,5Z" style="fill: rgb(128, 101, 196); stroke: rgb(84, 89, 110); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px;"/>
-    <circle class="cls-2" cx="18" cy="32" r="3" style="fill: rgb(255, 213, 120); stroke: rgb(84, 89, 110); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px;"/>
-    <circle class="cls-2" cx="48" cy="32" r="3" style="fill: rgb(255, 213, 120); stroke: rgb(84, 89, 110); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px;"/>
-    <rect class="cls-2" x="29" y="45" width="8" height="7" style="fill: rgb(255, 213, 120); stroke: rgb(84, 89, 110); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px;"/>
-    <path class="cls-2" d="M33,48h0A14,14,0,0,1,19,34V16l28,5V34A14,14,0,0,1,33,48Z" style="fill: rgb(255, 213, 120); stroke: rgb(84, 89, 110); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px;"/>
-    <path class="cls-3" d="M28,35a5,5,0,0,0,10,0Z" style="fill: rgb(84, 89, 110); stroke: rgb(84, 89, 110); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px;"/>
-    <ellipse class="cls-4" cx="33" cy="38" rx="2" ry="1" style="fill: rgb(255, 146, 125);"/>
-    <circle class="cls-5" cx="26.5" cy="27.5" r="1.5" style="fill: rgb(84, 89, 110);"/>
-    <circle class="cls-5" cx="39.5" cy="27.5" r="1.5" style="fill: rgb(84, 89, 110);"/>
-    <path class="cls-6" d="M16,10H47a0,0,0,0,1,0,0V21a0,0,0,0,1,0,0H27A11,11,0,0,1,16,10v0A0,0,0,0,1,16,10Z" style="fill: rgb(255, 243, 95); stroke: rgb(84, 89, 110); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px;"/>
-    <path class="cls-7" d="M13,52H53a0,0,0,0,1,0,0v4.86A3.14,3.14,0,0,1,49.86,60H16.14A3.14,3.14,0,0,1,13,56.86V52A0,0,0,0,1,13,52Z" style="fill: rgb(255, 255, 255); stroke: rgb(84, 89, 110); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px;"/>
-    <circle class="cls-8" cx="33" cy="56" r="2" style="fill: rgb(153, 153, 153);"/>
+  <g style="" transform="matrix(1.32521, 0, 0, 1.32521, -81.3026, -81.3025)">
+    <g id="mobile" transform="matrix(6.34515, 0, 0, 6.34515, 40.6101, 43.7826)" style="">
+      <path class="cls-1" d="M16.14,5H49.86A3.14,3.14,0,0,1,53,8.14V52a0,0,0,0,1,0,0H13a0,0,0,0,1,0,0V8.14A3.14,3.14,0,0,1,16.14,5Z" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px; fill: rgb(175, 223, 255); stroke: rgb(186, 190, 149);"/>
+      <rect class="cls-2" x="31.623" y="41.745" width="5.155" height="10.963" style="fill: rgb(255, 213, 120); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px; stroke: rgb(66, 68, 76);"/>
+      <g style="" transform="matrix(0.768872, 0, 0, 0.768872, 8.36585, 8.4721)">
+        <path class="cls-2" d="M33,48h0A14,14,0,0,1,19,34V16l28,5V34A14,14,0,0,1,33,48Z" style="fill: rgb(255, 213, 120); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px; stroke: rgb(66, 68, 76);"/>
+        <path class="cls-3" d="M28,35a5,5,0,0,0,10,0Z" style="fill: rgb(84, 89, 110); stroke: rgb(84, 89, 110); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px;"/>
+        <ellipse class="cls-4" cx="33" cy="38" rx="2" ry="1" style="fill: rgb(255, 146, 125);"/>
+        <circle class="cls-5" cx="26.5" cy="27.5" r="1.5" style="fill: rgb(84, 89, 110);"/>
+        <circle class="cls-5" cx="39.5" cy="27.5" r="1.5" style="fill: rgb(84, 89, 110);"/>
+        <path class="cls-6" d="M16,10H47a0,0,0,0,1,0,0V21a0,0,0,0,1,0,0H27A11,11,0,0,1,16,10v0A0,0,0,0,1,16,10Z" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px; stroke: rgb(66, 68, 76); fill: rgb(255, 246, 140);"/>
+      </g>
+      <path class="cls-7" d="M13,52H53a0,0,0,0,1,0,0v4.86A3.14,3.14,0,0,1,49.86,60H16.14A3.14,3.14,0,0,1,13,56.86V52A0,0,0,0,1,13,52Z" style="fill: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px; stroke: rgb(186, 190, 149);"/>
+      <circle class="cls-8" cx="33" cy="56" r="2" style="fill: rgb(153, 153, 153);"/>
+    </g>
   </g>
 </svg>
