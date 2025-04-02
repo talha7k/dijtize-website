@@ -106,7 +106,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
           Book Your Free Consultation Today
         </h2>
         <div className="my-4 flex flex-col items-center rounded-lg bg-white/5 py-3 md:space-y-1">
-          <p className="flex items-center space-x-3 text-xl md:text-2xl">
+          <p className="flex items-center space-x-1 text-lg md:text-xl">
             <Image
               src="/icons/whatsapp.svg"
               alt="WhatsApp Icon"

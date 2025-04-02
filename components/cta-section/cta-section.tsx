@@ -41,22 +41,23 @@ export function CTASection() {
                         deliver cutting-edge digital solutions.
                       </p>
 
-                      <div className="flex flex-col items-center space-y-2 md:space-y-4">
-                        <p className="flex items-center space-x-3 text-xl md:text-2xl">
+                      <div className="flex flex-col items-center rounded-lg bg-black/15 py-3 md:space-y-1">
+                        <p className="flex items-center space-x-1 text-xl md:text-2xl">
                           <Image
                             src="/icons/whatsapp.svg"
                             alt="WhatsApp Icon"
                             width={24}
                             height={24}
+                            className="fill-current object-contain text-primary"
                           />
                           <span className="text-neutral-200">
                             +1 (347) 479-2597
                           </span>
                         </p>
 
-                        <p className="text-gray-400 md:text-lg">
-                          Contact us today to discuss your project and how we
-                          can help your business grow.
+                        <p className="mt-1 text-xs text-primary md:text-sm">
+                          Whatsapp us now to discuss how we can elevate your
+                          business!
                         </p>
                       </div>
                     </div>
