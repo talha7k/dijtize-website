@@ -122,7 +122,7 @@ export const BlurImage = ({
           src={src}
           width={width}
           height={imageHeight}
-          onLoadingComplete={() => setLoading(false)}
+          onLoad={() => setLoading(false)}
           loading="lazy"
           decoding="async"
           blurDataURL={src}
