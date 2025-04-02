@@ -41,7 +41,7 @@ export function CTASection() {
                         deliver cutting-edge digital solutions.
                       </p>
 
-                      <div className="flex flex-col items-center rounded-lg bg-black/15 py-3 md:space-y-1">
+                      <div className="flex flex-col items-center rounded-lg bg-black/15 py-4 md:space-y-1">
                         <p className="flex items-center space-x-1 text-xl md:text-2xl">
                           <Image
                             src="/icons/whatsapp.svg"
@@ -55,7 +55,7 @@ export function CTASection() {
                           </span>
                         </p>
 
-                        <p className="mt-1 text-xs text-primary md:text-sm">
+                        <p className="mt-2 px-12 text-xs text-primary md:text-sm">
                           Whatsapp us now to discuss how we can elevate your
                           business!
                         </p>

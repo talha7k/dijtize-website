@@ -105,7 +105,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
         <h2 className="text-xl font-bold text-gray-100">
           Book Your Free Consultation Today
         </h2>
-        <div className="my-4 flex flex-col items-center rounded-lg bg-white/5 py-3 md:space-y-1">
+        <div className="my-4 flex flex-col items-center rounded-lg bg-white/5 py-4 md:space-y-1">
           <p className="flex items-center space-x-1 text-lg md:text-xl">
             <Image
               src="/icons/whatsapp.svg"
@@ -116,7 +116,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
             <span className="text-neutral-200">+1 (347) 479-2597</span>
           </p>
 
-          <p className="mt-2 px-3 text-xs text-gray-400 text-primary md:px-6">
+          <p className="mt-2 px-10 text-xs text-primary">
             WhatsApp now to discuss how we can elevate your business!
           </p>
         </div>
@@ -189,9 +189,17 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="Mobile App">Mobile App</SelectItem>
-                  <SelectItem value="Website">Website</SelectItem>
+                  <SelectItem value="Website">Website Design</SelectItem>
+                  <SelectItem value="SaaS">SaaS Product</SelectItem>
+                  <SelectItem value="Backend">Backend Development</SelectItem>
                   <SelectItem value="Marketing Campaigns">
-                    Marketing Campaigns
+                    Marketing Campaign
+                  </SelectItem>{" "}
+                  <SelectItem value="Social Media Management">
+                    Social Media Management
+                  </SelectItem>
+                  <SelectItem value="Branding">
+                    Branding and Identity
                   </SelectItem>
                   <SelectItem value="Video Production">
                     Video Production
