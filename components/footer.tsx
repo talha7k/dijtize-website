@@ -126,30 +126,40 @@ export function Footer() {
                   123 Tech Street, Digital City, 10010
                 </span>
               </li> */}
-              <li className="flex items-center gap-3">
-                <Phone size={20} className="text-primary-500 flex-shrink-0" />
-                <span className="text-neutral-400">+1 (207) 212-1473</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Image
-                  src="/icons/whatsapp.svg" // Path to the SVG in the public folder
-                  alt="Icon"
-                  width={20} // Set the width of the icon
-                  height={20} // Set the height of the icon
-                />{" "}
-                <a
-                  href="https://wa.me/13474792597"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-400"
-                >
-                  +1 (347) 479-2597
-                </a>{" "}
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail size={20} className="text-primary-500 flex-shrink-0" />
-                <span className="text-neutral-400">info@dijitize.com</span>
-              </li>
+              <a
+                href="tel:+12072121473"
+                className="hover:text-primary-500 flex items-center gap-3 text-neutral-400 no-underline"
+              >
+                <li className="flex items-center gap-3">
+                  <Phone size={20} className="text-primary-500 flex-shrink-0" />
+                  <span>+1 (207) 212-1473</span>
+                </li>
+              </a>
+              <a
+                href="https://wa.me/13474792597"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary-500 flex items-center gap-3 text-neutral-400 no-underline"
+              >
+                <li className="flex items-center gap-3">
+                  <Image
+                    src="/icons/whatsapp.svg" // Path to the SVG in the public folder
+                    alt="WhatsApp Icon"
+                    width={20} // Set the width of the icon
+                    height={20} // Set the height of the icon
+                  />
+                  <span>+1 (347) 479-2597</span>
+                </li>
+              </a>
+              <a
+                href="mailto:info@dijitize.com"
+                className="hover:text-primary-500 flex items-center gap-3 text-neutral-400 no-underline"
+              >
+                <li className="flex items-center gap-3">
+                  <Mail size={20} className="text-primary-500 flex-shrink-0" />
+                  <span>info@dijitize.com</span>
+                </li>
+              </a>
             </ul>
           </div>
         </div>

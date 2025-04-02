@@ -41,30 +41,29 @@ export function CTASection() {
                         deliver cutting-edge digital solutions.
                       </p>
 
-                      <div className="flex flex-col items-center rounded-lg bg-black/15 py-4 md:space-y-1">
-                        <p className="flex items-center space-x-1 text-xl md:text-2xl">
-                          <Image
-                            src="/icons/whatsapp.svg"
-                            alt="WhatsApp Icon"
-                            width={24}
-                            height={24}
-                            className="fill-current object-contain text-primary"
-                          />
-                          <a
-                            href="https://wa.me/13474792597"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-neutral-400"
-                          >
-                            +1 (347) 479-2597
-                          </a>
-                        </p>
+                      <a
+                        href="https://wa.me/13474792597"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div className="flex flex-col items-center rounded-lg bg-black/15 py-4 md:space-y-1">
+                          <p className="flex items-center space-x-1 text-xl md:text-2xl">
+                            <Image
+                              src="/icons/whatsapp.svg"
+                              alt="WhatsApp Icon"
+                              width={24}
+                              height={24}
+                              className="fill-current object-contain text-primary"
+                            />
+                            <span>+1 (347) 479-2597</span>
+                          </p>
 
-                        <p className="mt-2 px-12 text-xs text-primary md:text-sm">
-                          Whatsapp us now to discuss how we can elevate your
-                          business!
-                        </p>
-                      </div>
+                          <p className="mt-2 px-12 text-xs text-primary md:text-sm">
+                            Whatsapp us now to discuss how we can elevate your
+                            business!
+                          </p>
+                        </div>
+                      </a>
                     </div>
 
                     <button

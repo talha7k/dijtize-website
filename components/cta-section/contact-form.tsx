@@ -105,21 +105,28 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
         <h2 className="text-xl font-bold text-gray-100">
           Book Your Free Consultation Today
         </h2>
-        <div className="my-4 flex flex-col items-center rounded-lg bg-white/5 py-4 md:space-y-1">
-          <p className="flex items-center space-x-1 text-lg md:text-xl">
-            <Image
-              src="/icons/whatsapp.svg"
-              alt="WhatsApp Icon"
-              width={24}
-              height={24}
-            />
-            <span className="text-neutral-200">+1 (347) 479-2597</span>
-          </p>
 
-          <p className="mt-2 px-10 text-xs text-primary">
-            WhatsApp now to discuss how we can elevate your business!
-          </p>
-        </div>
+        <a
+          href="https://wa.me/13474792597"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="my-4 flex flex-col items-center rounded-lg bg-white/5 py-4 md:space-y-1">
+            <p className="flex items-center space-x-1 text-lg md:text-xl">
+              <Image
+                src="/icons/whatsapp.svg"
+                alt="WhatsApp Icon"
+                width={24}
+                height={24}
+              />
+              <span>+1 (347) 479-2597</span>
+            </p>
+
+            <p className="mt-2 px-10 text-xs text-primary">
+              WhatsApp now to discuss how we can elevate your business!
+            </p>
+          </div>
+        </a>
 
         <p className="mb-3 mt-1 max-w-sm text-xs text-gray-400">
           Complete the form below to schedule your free consultation.
