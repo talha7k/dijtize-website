@@ -137,7 +137,14 @@ export function Footer() {
                   width={20} // Set the width of the icon
                   height={20} // Set the height of the icon
                 />{" "}
-                <span className="text-neutral-400">+1 (347) 479-2597</span>
+                <a
+                  href="https://wa.me/13474792597"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-400"
+                >
+                  +1 (347) 479-2597
+                </a>{" "}
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-primary-500 flex-shrink-0" />

@@ -50,9 +50,14 @@ export function CTASection() {
                             height={24}
                             className="fill-current object-contain text-primary"
                           />
-                          <span className="text-neutral-200">
+                          <a
+                            href="https://wa.me/13474792597"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-neutral-400"
+                          >
                             +1 (347) 479-2597
-                          </span>
+                          </a>
                         </p>
 
                         <p className="mt-2 px-12 text-xs text-primary md:text-sm">
