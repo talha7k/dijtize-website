@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/dialog";
 import { BlurImage } from "./BlurImage";
 import Image from "next/image";
-import { PortfolioDemo } from "./PortfolioDemo";
+import { PortfolioWebView } from "./PortfolioWebView";
 
 interface PortfolioModalProps {
   isOpen: boolean;
@@ -61,7 +61,7 @@ export function PortfolioModal({
   return (
     <>
       <Dialog open={isOpen && !isDemoOpen} onOpenChange={onClose}>
-        <DialogContent className="modal scrollbar-hidden flex max-h-[95vh] max-w-[90vw] items-center justify-center rounded-xl bg-transparent/55 p-5 backdrop-blur-sm">
+        <DialogContent className="modal scrollbar-hidden flex max-h-[90vh] min-h-[80vh] max-w-[90vw] items-center justify-center rounded-xl border-0 bg-white/5 p-5 backdrop-blur-sm">
           <div className="relative mt-6 max-h-[75vh] w-full overflow-y-auto px-2 py-3 md:p-8">
             <DialogHeader>
               <DialogTitle className="text-center text-3xl font-bold">
@@ -146,7 +146,7 @@ export function PortfolioModal({
 
       {/* Full-Screen Demo */}
       {isDemoOpen && (
-        <PortfolioDemo
+        <PortfolioWebView
           link={portfolioItem.link}
           title={portfolioItem.title}
           onClose={handleDemoClose}

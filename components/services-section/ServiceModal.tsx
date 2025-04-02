@@ -33,17 +33,17 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="modal scrollbar-hidden flex max-h-[90vh] max-w-[90vw] items-center justify-center rounded-xl bg-transparent/55 p-5 backdrop-blur-sm">
-        <div className="relative mt-6 max-h-[75vh] w-full overflow-y-auto px-2 py-3 md:p-8">
+      <DialogContent className="modal scrollbar-hidden flex max-h-[90vh] min-h-[80vh] max-w-[90vw] justify-center rounded-xl border-0 bg-white/5 p-5 backdrop-blur-sm">
+        <div className="relative h-full w-full overflow-y-auto px-2 py-3 md:p-8">
           <DialogHeader>
-            <DialogTitle className="text-center text-2xl font-bold text-gray-100">
+            <DialogTitle className="text-center text-2xl font-bold text-primary">
               {service.subservice}
             </DialogTitle>
           </DialogHeader>
 
-          <div className="mt-6 flex flex-col gap-8 sm:grid sm:grid-cols-[35%_65%] md:grid-cols-[35%_65%]">
+          <div className="mt-[5%] flex grid-cols-[45%_45%] flex-col gap-8 self-center sm:grid md:mt-[10%]">
             {/* Image Container */}
-            <div className="relative flex h-[150px] max-h-[150px] min-h-[100px] w-full items-center justify-center overflow-hidden rounded-lg transition-transform duration-300 hover:scale-110 sm:h-auto sm:w-auto">
+            <div className="relative max-h-[85vh] min-h-[20vh] w-full cursor-pointer rounded-xl transition-transform duration-300 sm:h-auto sm:w-auto">
               <Image
                 src={service.image || "/placeholder.svg"}
                 alt={service.subservice}

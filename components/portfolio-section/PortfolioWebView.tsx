@@ -8,7 +8,7 @@ interface PortfolioDemoProps {
   onClose: () => void;
 }
 
-export function PortfolioDemo({ link, title, onClose }: PortfolioDemoProps) {
+export function PortfolioWebView({ link, title, onClose }: PortfolioDemoProps) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
       <div className="relative m-[2.5%] h-[95%] w-[95%] overflow-hidden rounded-xl">

@@ -19,7 +19,7 @@ export function TestimonialsSection() {
       <div className="container mx-auto px-4">
         <div className="my-8 text-center">
           <h2 className="gray-100 mb-4 text-3xl font-bold md:text-4xl">
-            Our Feedbacks
+            Our Feedback
           </h2>
           <p className="mx-auto max-w-2xl text-gray-400">
             What people say about us!
