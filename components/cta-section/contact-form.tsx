@@ -9,12 +9,21 @@ import { Button } from "../ui/button";
 import { XIcon } from "lucide-react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
 
 export function ContactForm({ onClose }: { onClose?: () => void }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
+    projectType: "", // Added projectType field
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -26,6 +35,10 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleProjectTypeChange = (value: string) => {
+    setFormData((prev) => ({ ...prev, projectType: value }));
   };
 
   const handleRecaptchaChange = (token: string | null) => {
@@ -64,7 +77,7 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
       }
 
       setSuccess(true);
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", message: "", projectType: "" }); // Reset projectType as well
       setRecaptchaToken(null);
     } catch (err: any) {
       setError(err.message || "Failed to submit the form. Please try again.");
@@ -90,15 +103,26 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
 
       <div className="mt-4 flex flex-col items-center justify-center">
         <h2 className="text-xl font-bold text-gray-100">
-          Book Your Free Consultation
+          Book Your Free Consultation Today
         </h2>
-        <p className="mb-2 mt-2 max-w-sm text-sm text-primary">
-          Get expert advice. <br />
-          Schedule a free Zoom consultation today!
-        </p>
-        <p className="mb-6 mt-2 max-w-sm text-sm text-gray-400">
-          Fill out the form below to connect with Dijitize and discuss your
-          digital transformation needs.
+        <div className="my-4 flex flex-col items-center rounded-lg bg-white/5 py-3 md:space-y-1">
+          <p className="flex items-center space-x-3 text-xl md:text-2xl">
+            <Image
+              src="/icons/whatsapp.svg"
+              alt="WhatsApp Icon"
+              width={24}
+              height={24}
+            />
+            <span className="text-neutral-200">+1 (347) 479-2597</span>
+          </p>
+
+          <p className="mt-2 px-3 text-xs text-gray-400 text-primary md:px-6">
+            WhatsApp now to discuss how we can elevate your business!
+          </p>
+        </div>
+
+        <p className="mb-3 mt-1 max-w-sm text-xs text-gray-400">
+          Complete the form below to schedule your free consultation.
         </p>
 
         {success ? (
@@ -153,6 +177,28 @@ export function ContactForm({ onClose }: { onClose?: () => void }) {
                 type="email"
                 required
               />
+            </LabelInputContainer>
+            {/* Project Type Dropdown */}
+            <LabelInputContainer className="mb-4">
+              <Label htmlFor="projectType" className="self-start">
+                Project Type
+              </Label>
+              <Select onValueChange={handleProjectTypeChange}>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select a project type" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Mobile App">Mobile App</SelectItem>
+                  <SelectItem value="Website">Website</SelectItem>
+                  <SelectItem value="Marketing Campaigns">
+                    Marketing Campaigns
+                  </SelectItem>
+                  <SelectItem value="Video Production">
+                    Video Production
+                  </SelectItem>
+                  <SelectItem value="Other">Other</SelectItem>
+                </SelectContent>
+              </Select>
             </LabelInputContainer>
             <LabelInputContainer className="mb-4">
               <Label htmlFor="message" className="self-start">

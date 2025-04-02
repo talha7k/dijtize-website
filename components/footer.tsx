@@ -1,16 +1,7 @@
 "use client";
 
 import { ThemeToggle } from "./ui/theme-toggle";
-import {
-  CuboidIcon as Cube,
-  Github,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
+import { CuboidIcon as Cube, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 
 export function Footer() {
@@ -126,7 +117,7 @@ export function Footer() {
           <div>
             <h3 className="mb-4 text-lg font-bold">Contact Us</h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
+              {/* <li className="flex items-start gap-3">
                 <MapPin
                   size={20}
                   className="text-primary-500 mt-1 flex-shrink-0"
@@ -134,10 +125,19 @@ export function Footer() {
                 <span className="text-neutral-400">
                   123 Tech Street, Digital City, 10010
                 </span>
-              </li>
+              </li> */}
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-primary-500 flex-shrink-0" />
-                <span className="text-neutral-400">+1 (555) 123-4567</span>
+                <span className="text-neutral-400">+1 (207) 212-1473</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Image
+                  src="/icons/whatsapp.svg" // Path to the SVG in the public folder
+                  alt="Icon"
+                  width={20} // Set the width of the icon
+                  height={20} // Set the height of the icon
+                />{" "}
+                <span className="text-neutral-400">+1 (347) 479-2597</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-primary-500 flex-shrink-0" />

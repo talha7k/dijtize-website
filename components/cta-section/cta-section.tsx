@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ContactForm } from "./contact-form";
 import { motion, AnimatePresence } from "framer-motion";
-
+import Image from "next/image";
 export function CTASection() {
   const [showForm, setShowForm] = useState(false);
 
@@ -29,15 +29,38 @@ export function CTASection() {
                   transition={{ duration: 0.3 }}
                 >
                   <>
-                    <h2 className="gray-100 mb-6 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
-                      Ready to transform your{" "}
-                      <span className="text-primary">idea</span> into{" "}
-                      <span className="text-primary">digital reality</span>?
-                    </h2>
-                    <p className="mb-8 max-w-3xl text-base leading-relaxed text-gray-400 md:text-lg">
-                      Join the innovative companies that trust Dijitize to
-                      deliver cutting-edge digital solutions.
-                    </p>
+                    <div className="mb-8 text-center md:mb-12">
+                      <h2 className="mb-4 text-3xl font-bold leading-tight text-gray-100 md:text-4xl lg:text-5xl">
+                        Ready to transform your{" "}
+                        <span className="text-primary">idea</span> into{" "}
+                        <span className="text-primary">digital reality</span>?
+                      </h2>
+
+                      <p className="mb-6 text-lg text-gray-400 md:mb-8 md:text-xl">
+                        Join the innovative companies that trust Dijitize to
+                        deliver cutting-edge digital solutions.
+                      </p>
+
+                      <div className="flex flex-col items-center space-y-2 md:space-y-4">
+                        <p className="flex items-center space-x-3 text-xl md:text-2xl">
+                          <Image
+                            src="/icons/whatsapp.svg"
+                            alt="WhatsApp Icon"
+                            width={24}
+                            height={24}
+                          />
+                          <span className="text-neutral-200">
+                            +1 (347) 479-2597
+                          </span>
+                        </p>
+
+                        <p className="text-gray-400 md:text-lg">
+                          Contact us today to discuss your project and how we
+                          can help your business grow.
+                        </p>
+                      </div>
+                    </div>
+
                     <button
                       onClick={() => {
                         setShowForm(true);
